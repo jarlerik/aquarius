@@ -1,0 +1,16 @@
+.contentContainer {
+	margin: 200px 0px 100px 0px;
+}
+
+.content-header {
+	min-height: 200px;
+    /* margin: auto; */
+    text-transform: uppercase;
+    background:	#32c5d2;
+    padding: 50px 20px 50px 20px;
+}
+
+.contentContainer div {
+	margin-top: 500px;
+	margin-bottom: 500px;
+}

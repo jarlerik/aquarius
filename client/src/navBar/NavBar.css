@@ -1,0 +1,51 @@
+.navBar-container {
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar-default {
+	min-height: 100px;
+}
+
+.navbar-default a {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.navbar-default a.active {
+	color: #32c5d2!important;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.flex-5 {
+	flex: 3;
+}
+.topBar {
+	background: rgb(31, 31, 31);
+}
+.topBar h1 {
+	margin: 0;
+	color: #32c5d2;
+}
+
+.topBar i {
+	color: #848484;
+    margin: 5px;
+}
+
+#language-options {
+	color: #848484;
+}
+
+#site-name {
+	text-align: center;
+}
+
