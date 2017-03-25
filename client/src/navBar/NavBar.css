@@ -2,6 +2,8 @@
 	position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.91);
 }
 .navbar-default {
 	min-height: 100px;
@@ -11,6 +13,7 @@
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 700;
+	border-top: none;
 }
 
 .navbar-default a.active {
@@ -29,7 +32,8 @@
 	flex: 3;
 }
 .topBar {
-	background: rgb(31, 31, 31);
+	background: rgba(255, 255, 255, 0.91);
+	padding-bottom: 5px;
 }
 .topBar h1 {
 	margin: 0;

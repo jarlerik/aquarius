@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav, DropdownButton, MenuItem} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
-import {Events, scrollSpy, Link} from'react-scroll';
+import {Events, scrollSpy, Link, scroller} from'react-scroll';
 
 import ContentContainer from '../ContentContainer';
 import './NavBar.css';
@@ -19,12 +19,16 @@ export default class NavBar extends React.Component {
 
     Events.scrollEvent.register('begin', this.closeNavi.bind(this));
 
-    // Events.scrollEvent.register('end',(to, element) => {
-    //   console.log("end", arguments);
-    // });
+    Events.scrollEvent.register('end', this.setActiveNavi.bind(this));
 
     scrollSpy.update();
 
+  }
+
+  setActiveNavi(section) {
+  	this.setState({activeSection: section})
+  	scroller.setActiveLink(section);
+  	console.log("getActiveLink::", scroller.getActiveLink());
   }
 
   componentWillUnmount() {
@@ -89,15 +93,21 @@ export default class NavBar extends React.Component {
 				    </Navbar.Header>
 				    <Navbar.Collapse>
 					    <Nav>
-					    	<li>
-						    	<Link activeClass="active" to="test1" spy={true} smooth={true} offset={200} duration={1000} onSetActive={this.handleSetActive}>
-						          Test 1
+					    	<li style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
+						          Ajankohtaista
 						        </Link>
 						    </li>
-					    	<li onClick={this.onSelect.bind(this)}><NavLink activeClassName="active" to="/ajankohtaista">Ajankohtaista</NavLink></li>
-			                <li><NavLink activeClassName="active" to="/ryhmäliikunta">Ryhmäliikunta</NavLink></li>
-			                <li><NavLink activeClassName="active" to="/aikataulut">Aikataulut</NavLink></li>
-			                <li><NavLink activeClassName="active" to="/personal-training">Personal-training</NavLink></li>
+						    <li style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
+						    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
+						          Ryhmäliikunta
+						        </Link>
+						    </li>
+						    <li style={{cursor: 'pointer'}} className={this.state.activeSection === "personal-training" ? "active-section" : "unactive-section"}>
+						    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+						          Yrityspalvelut
+						        </Link>
+						    </li>
 					    </Nav>
 					</Navbar.Collapse>
 				  </Navbar>
