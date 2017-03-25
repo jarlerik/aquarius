@@ -50,7 +50,7 @@ export default class Section extends React.Component {
   render() {
   	return (
       <div className="section">
-        <Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
+        <Link activeClass="active" to="test1" spy={true} smooth={true} offset={-100} duration={500} onSetActive={this.handleSetActive}>
           Test 1
         </Link>
         <Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} delay={1000}>

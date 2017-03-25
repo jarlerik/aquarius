@@ -8,15 +8,20 @@ import './NavBar.css';
 
 export default class NavBar extends React.Component {
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			naviOpen: false
+		}
+	}
+
 	componentDidMount() {
 
-    Events.scrollEvent.register('begin', function(to, element) {
-      console.log("begin", arguments);
-    });
+    Events.scrollEvent.register('begin', this.closeNavi.bind(this));
 
-    Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
-    });
+    // Events.scrollEvent.register('end',(to, element) => {
+    //   console.log("end", arguments);
+    // });
 
     scrollSpy.update();
 
@@ -44,7 +49,20 @@ export default class NavBar extends React.Component {
   }
 
   handleSetActive(to) {
-    console.log(to);
+    console.log("Handle Active nav");
+  }
+
+  onToggle() {
+  	const naviOpen = this.state.naviOpen;
+  	this.setState({naviOpen: !naviOpen})
+  }
+
+  onSelect() {
+  	this.setState({naviOpen: false});
+  }
+
+  closeNavi() {
+  	this.setState({naviOpen: false});
   }
 
 	render() {
@@ -65,18 +83,18 @@ export default class NavBar extends React.Component {
 						
 					</div>
 				</div>
-				<Navbar collapseOnSelect>
+				<Navbar expanded={this.state.naviOpen} onToggle={this.onToggle.bind(this)}>
 				    <Navbar.Header>
 				      <Navbar.Toggle />
 				    </Navbar.Header>
 				    <Navbar.Collapse>
 					    <Nav>
 					    	<li>
-						    	<Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={1000} onSetActive={this.handleSetActive}>
+						    	<Link activeClass="active" to="test1" spy={true} smooth={true} offset={200} duration={1000} onSetActive={this.handleSetActive}>
 						          Test 1
 						        </Link>
 						    </li>
-					    	<li><NavLink activeClassName="active" to="/ajankohtaista">Ajankohtaista</NavLink></li>
+					    	<li onClick={this.onSelect.bind(this)}><NavLink activeClassName="active" to="/ajankohtaista">Ajankohtaista</NavLink></li>
 			                <li><NavLink activeClassName="active" to="/ryhmäliikunta">Ryhmäliikunta</NavLink></li>
 			                <li><NavLink activeClassName="active" to="/aikataulut">Aikataulut</NavLink></li>
 			                <li><NavLink activeClassName="active" to="/personal-training">Personal-training</NavLink></li>

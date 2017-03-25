@@ -30,9 +30,11 @@ const ContentContainer = (props) => {
 	    	<div><h2>{header}</h2></div>
 	    	<div><p>{p1}</p></div>
 	    	<div><p>{p2}</p></div>
-	    	<Element name="test1" className="element">
-			  test 1
-			</Element>
+	    	<div>
+		    	<Element name="test1" className="element"  style={{paddingTop: '50px'}}>
+				  test 1
+				</Element>
+			</div>
 		</div>
 	);
 };
