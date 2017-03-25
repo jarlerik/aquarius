@@ -179,7 +179,7 @@ const ContentContainer = (props) => {
 					    	<div><p>{p2}</p></div>
 					    </Col>
 						<Col xs={12} md={4}>
-							<Image src="http://placehold.it/300" responsive />
+							<div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">Julkaissut <a href="https://www.facebook.com/facebook/">Facebook</a>&nbsp;<a href="https://www.facebook.com/20531316728/posts/10154009990506729/">27. elokuuta 2015</a></blockquote></div>
 						</Col>
 					</Row>
 	          		
