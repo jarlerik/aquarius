@@ -34,8 +34,98 @@ const ryhmaliikunta = {
 			Voit varata paikan etukäteen tunneille osoitteessa
 			aquarius.bypolar.fi
 			Nettivarauksia varten tarvitset tunnuksen ja salasanan,
-			jotka saat Aquariuksen vastaanotosta.`
+			jotka saat Aquariuksen vastaanotosta.`,
+
+	exercises : {
+		header: 'Ryhmäliikuntatuntimme',
+		exerciseTypes: [
+			{
+				name: 'BodyBalance®',
+				description: `LesMills Bodybalance on joogaan, taichiin ja pilatekseen perustuva
+					harjoittelumuoto. Tunnilla tehdään erilaisia kehon tasapainoa, liikkuvuutta
+					ja rentoutumista edistäviä liikkeitä. Harjoituksen aikana ei käytetä kenkiä
+					tai sukkia.`
+			},
+			{
+				name: 'BodyCombat®',
+				description: `BodyCombat on tunti, missä on paljon voimaa ja energiaa. Käytät
+					tekniikoita eri taistelulajeista kuten karate, teakwondo, capoeira,
+					nyrkkeily, muay thai ja tai chi.`
+			},
+			{
+				name: 'BodyPump®',
+				description: `Yksinkertaista, mutta haastavaa musiikin tahtiin tehtävää
+					voimaharjoittelua koko vartalolle. Välineenä on levytanko painoineen.
+					Vastuksen voit helposti säätää omaan kuntotasoosi sopivaksi.`
+			},
+			{
+				name: 'BodyVive®',
+				description: `BodyVive on cross-training tunti, jossa keskitytään nostamaan sykettä,
+					vahvistamaan lihaksia ja parantamaan keskivartalon hallintaa.`
+			},
+			{
+				name: 'CxWorx®',
+				description: `Tämän tehokkaan core-treenin liikkeet kehittävät funktionaalista voimaa
+					sekä vahvistavat vatsa- ja pakaralihaksia. CX30 on puolituntia kestävä
+					harjoitus, joka haastaa sekä vartalon että keskittymiskyvyn.`
+			},
+			{
+				name: 'Fatburning bike',
+				description: `Tehokasta kestävyysharjoittelua spinningpyörällä. Tavoitteena on edistää
+					rasvanpolttoa ja haasta kehoa ja mieltä. Hiki kyllä tulee!`
+			},
+			{
+				name: 'Fatburn',
+				description: `Monipuolinen tunti, mikä sisältää sykkeennostoja ja lihaskuntoa. Liikkeet
+					tehdään sekä kehonpainolla, että myös step-laudan, käsipainojen, tangon
+					ja kahvakuulan avulla. Helppo ja hauska tunti.`
+			},
+			{
+				name: 'Flex and Stretch',
+				description: `Kehonhuolto, missä tehdään erilaisia aktiivisia liikkeitä ja venytyksiä, joilla
+					parannetaan kehon liikkuvuutta ja hyvinvointia.`
+			},
+			{
+				name: 'Grit Plyo®',
+				description: `Cardio tehdään ilman välineitä. Tunnilla hyödynnetään kehon omaa painoa
+					kestävyyskunnon parantamiseksi erittäin intensiivisillä harjoituksilla.
+					Korkea energiakulutus.`
+			},
+			{
+				name: 'Grit Strength®',
+				description: `Maksimoi lihasvoimasi! Käytetään harjoitteluvastuksina levytankoa, -
+					painoja ja step-lautaa. Grit Strength on harjoitus, jonka tulokset huomaat
+					lihaskunnossasi nopeasti.`
+			},
+			{
+				name: 'Kahvakuula',
+				description: `Tehokas lihaskuntopainotteinen tunti. Harjoittelulla kehitetään
+					lihaskunnon lisäksi kehonhallintaa, tasapainoa, kestävyyttä ja liikkuvuutta.
+					Sopii kaiken kuntoisille. Kahvakuulan avulla säästät aikaa ja vaivaa, mutta
+					et tingi tehosta.`
+			},
+			{
+				name: 'Kinesis',
+				description: `Tapa harjoittaa niin kehoa kuin mieltä vapaiden ja luonnollisten liikkeiden
+					kautta. Harjoitat samaan aikaan voimaa, tasapainoa ja notkeutta. Kaikki
+					harjoitukset yhdessä kokonaisuudessa.`
+			},
+			{
+				name: 'Kinesis 65 +',
+				description: `Helppoa ja hauskaa liikuntaa. 60 + kiertoharjoittelutunti.`
+			},
+			{
+				name: 'Roller',
+				description: `Roller - kehonhuoltotunnilla suoritetaan monipuolisia kehonhuoltoon
+					tähtääviä liikkeitä rullaa (foam roller) apuna käyttäen. Tunnilla
+					vahvistetaan lihaksia ja lisätään liikkuvuutta aktiivisilla venytyksillä ja
+					rentoutetaan lihaksia sekä lihaskalvoja erilaisilla rullauksilla.`
+			},
+
+		]
+	}
 };
+
 
 const yrityspalvelut = {
 
@@ -106,6 +196,28 @@ const ContentContainer = (props) => {
 			          		<div><h2>{ryhmaliikunta.header}</h2></div>
 					    	<div><p>{ryhmaliikunta.text}</p></div>
 					    </Col>
+					</Row>
+		        </Element>
+		    </Row>
+		    <hr/>
+		    <Row>
+		        <Element name="harjoitukset" className="element">
+		        	<Row>
+		          		<div><h3>{ryhmaliikunta.exercises.header}</h3></div>
+				    	<div>
+				    		{
+				    			ryhmaliikunta.exercises.exerciseTypes.map((exercise) =>  {
+				    				return (
+				    					<Col xs={12} md={3}>
+				    						<div className="exercise aqua-border-top">
+					    						<p className="exercise-name">{exercise.name}</p>
+					    						<p className="exercice-description" >{exercise.description}</p>
+					    					</div>
+				    					</Col>
+				    					);
+				    			})
+				    		}
+				    	</div>
 					</Row>
 		        </Element>
 		    </Row>

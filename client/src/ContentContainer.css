@@ -3,6 +3,10 @@
 	padding: 100px 20px 100px 20px;
 }
 
+.contentContainer h3, .contentContainer h2 {
+	color: #32c5d2;
+}
+
 .content-header {
 	//min-height: 200px;
     /* margin: auto; */
@@ -28,4 +32,21 @@
 
 .aqua-border-right {
 	border-right: 3px solid #32c5d2;	
+} 
+
+.aqua-border-top {
+	border-top: 3px solid #32c5d2;
+} 
+.exercise-name {
+	font-weight: bold;
+}
+
+.exercice-description {
+	border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.exercise {
+	 padding-top: 5px;
+
 }
