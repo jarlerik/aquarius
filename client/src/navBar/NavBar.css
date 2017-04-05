@@ -4,6 +4,28 @@
     width: 100%;
     z-index: 100;
     background: rgba(255, 255, 255, 0.91);
+    padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+	.navlinks {
+		display: none!important;
+	}
+}
+
+.navlinks {
+	justify-content: center;
+}
+
+.navlinks > div {
+	margin: auto 15px;
+	text-transform: uppercase;
+
+	font-family: 'Montserrat', sans-serif!important;
+}
+
+.navlinks > div > a {
+	color: #848484;
 }
 .navbar-default {
 	min-height: 100px;
@@ -32,7 +54,6 @@
 	flex: 3;
 }
 .topBar {
-	background: rgba(255, 255, 255, 0.91);
 	padding-bottom: 5px;
 }
 .topBar h1 {

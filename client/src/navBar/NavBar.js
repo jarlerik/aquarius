@@ -1,6 +1,4 @@
 import React from 'react';
-import {Navbar, Nav, DropdownButton, MenuItem} from 'react-bootstrap';
-import {NavLink} from 'react-router-dom';
 import {Events, scrollSpy, Link, scroller} from'react-scroll';
 
 import ContentContainer from '../ContentContainer';
@@ -17,7 +15,9 @@ export default class NavBar extends React.Component {
 
 	componentDidMount() {
 
-    Events.scrollEvent.register('begin', this.closeNavi.bind(this));
+    Events.scrollEvent.register('begin', (args) => {
+    	console.log("scrollEvent started..", args)
+    });
 
     Events.scrollEvent.register('end', this.setActiveNavi.bind(this));
 
@@ -69,13 +69,11 @@ export default class NavBar extends React.Component {
   	this.setState({naviOpen: false});
   }
 
+
 	render() {
 		return (
 			<div className="navBar-container">
 				<div className="topBar flex">
-					<div id="site-name" className="flex-5">
-						<h1>Aquarius sporting club</h1>
-					</div>
 					<div className="flex-1">
 						<div className="flex">
 							<i className="fa fa-facebook fa-2x flex-1"/>
@@ -87,30 +85,33 @@ export default class NavBar extends React.Component {
 						
 					</div>
 				</div>
-				<Navbar expanded={this.state.naviOpen} onToggle={this.onToggle.bind(this)}>
-				    <Navbar.Header>
-				      <Navbar.Toggle />
-				    </Navbar.Header>
-				    <Navbar.Collapse>
-					    <Nav>
-					    	<li style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
-						          Ajankohtaista
-						        </Link>
-						    </li>
-						    <li style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
-						          Ryhmäliikunta
-						        </Link>
-						    </li>
-						    <li style={{cursor: 'pointer'}} className={this.state.activeSection === "personal-training" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
-						          Yrityspalvelut
-						        </Link>
-						    </li>
-					    </Nav>
-					</Navbar.Collapse>
-				  </Navbar>
+					<div className="flex navlinks">
+				    	<div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
+					          Ajankohtaista
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
+					    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
+					          Ryhmäliikunta
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "aikataulut" ? "active-section" : "unactive-section"}>
+					    	<Link activeClass="active" className="aikataulut" to="aikataulut" spy={true} smooth={true} offset={-150} duration={1000}>
+					          Aikataulut
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
+					    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+					          Yrityspalvelut
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
+					    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
+					          Yhteystiedot ja hinnasto
+					        </Link>
+					    </div>
+				    </div>
 	        </div>
 		);
 	}

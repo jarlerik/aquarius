@@ -228,6 +228,20 @@ const ContentContainer = (props) => {
 		    </Row>
 		    <hr/>
 		    <Row>
+		        <Element name="aikataulut" className="element aqua-border-right">
+		        	<Row>
+		        		<Col xs={12} md={4}>
+							<Image src="http://placehold.it/300" responsive />
+						</Col>
+						<Col xs={12} md={8}>
+			          		<div><h2>{`Aikataulut`}</h2></div>
+					    	<div><p>{`Aikataulut content`}</p></div>
+					    </Col>
+					</Row>
+		        </Element>
+		    </Row>
+		    <hr/>
+		    <Row>
 		        <Element name="yrityspalvelut" className="element aqua-border-left">
 		        	<Row>
 		        		<Col xs={12} md={8}>
@@ -246,7 +260,20 @@ const ContentContainer = (props) => {
 					</Row>
 		        </Element>
 		    </Row>
-
+		    <hr/>
+		    <Row>
+		        <Element name="yhteystiedot-hinnasto" className="element aqua-border-right">
+		        	<Row>
+		        		<Col xs={12} md={4}>
+							<Image src="http://placehold.it/300" responsive />
+						</Col>
+						<Col xs={12} md={8}>
+			          		<div><h2>{`Yhteystiedot ja hinnasto`}</h2></div>
+					    	<div><p>{`Yhteystiedot ja hinnasto content`}</p></div>
+					    </Col>
+					</Row>
+		        </Element>
+		    </Row>
 
 		</div>
 	);
