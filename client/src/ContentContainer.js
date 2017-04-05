@@ -1,11 +1,10 @@
 import React from 'react';
 import './ContentContainer.css';
 import {Element} from'react-scroll';
-import {Col, Image, Row, Button, ResponsiveEmbed} from 'react-bootstrap';
+import {Col, Image, Row, Button} from 'react-bootstrap';
 import {utils} from 'react-bootstrap'
 import yrityspalvelutImg from './images/yrityspalvelut.jpg';
-import ryhmaliikuntaImg from './images/ryhmaliikunta.jpg';
-import personalTrainerImg from './images/personal_trainer.jpg';
+import moment from 'moment';
 
 utils.bootstrapUtils.addStyle(Button, 'custom');
 
@@ -182,21 +181,68 @@ const pt = {
 	treenimuotoihin.`
 }
 
+const posts = [
+  {
+    header: 'Inbody 35 €',
+    body: 'Inbody kehon koostumusanalyysi mittaa mm. lihasmassan, lihastasapainon, proteiini- ja rasvamassan, rasvaprosentin, mineraalit, kehon nesteet sekä BMI.'
+  },
+  {
+    header: 'Iyengar jooga keväällä',
+    body: 'Lauantaina 22.4 klo. 12.30-14.30'
+  },
+  {
+    header: 'Sauna on lämmin sinulle',
+    body: 'Ma-To 9-11.30 & 16-20.30 Pe 9-11.30 & 16-19.30 La 10-17.30 Su 15-19.30'
+  }
+];
+
+moment.locale('fi');
+const date = moment().format('LL');
+
 
 
 const ContentContainer = (props) => {
 	return (
-
 		<div className="contentContainer">
 			<Row className="Content-element">
-				<Element name="ajankohtaista" className="element aqua-border-left">
-					<Row>
-						<Col xs={12} md={8}>
+				<div className="element aqua-border-left">
+					<Row style={{marginBottom: '50px'}}>
+						<Col xs={12} md={12}>
 							<div><h2>{header}</h2></div>
 					    	<div><p>{p1}</p></div>
 					    	<div><p>{p2}</p></div>
 					    </Col>
-						<Col xs={12} md={4}>
+						
+					</Row>
+	          		<Row>
+	          			<Col xs={6} md={8}>
+			          		<div className="post-item-list">
+		                        {posts.map((post) => {
+		                            return (
+		                              <div className="post-item">
+		                                <div className="flex space-between">
+		                                  <div className="flex-8">
+		                                    <p className="post-header">{post.header}</p>
+		                                  </div>
+		                                  <div style={{margin: 'auto 0', color: '#ccc'}} className="flex-2">
+		                                    <span>{date}</span>
+		                                  </div>
+		                                </div>
+		                                <div className="post-item-content">
+		                                  <Row>
+		                                    <Col xs={12} md={12}>
+		                                      <p>{post.body}</p>
+		                                    </Col>
+		                                  </Row>
+		                                </div>
+		                                <hr/>
+		                              </div>
+		                            );
+		                          })
+		                        }
+		                     </div>
+		                </Col>
+	                     <Col xs={6} md={4}>
 							<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/aquariussporting" data-width="306" data-show-faces="true" data-stream="true" data-header="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306">
 								<span style={{verticalAlign: 'bottom', width: '306px', height: '540px'}}>
 									<iframe name="f3d9bbdd3d41fe8" width="306px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F1FegrZjPbq3.js%3Fversion%3D42%23cb%3Df749e3b0a8094c%26domain%3Dwww.aquariussporting.fi%26origin%3Dhttp%253A%252F%252Fwww.aquariussporting.fi%252Ff36784c8d998ee8%26relation%3Dparent.parent&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306" style={{border: 'none', visibility: 'visible', width: '306px', height: '540px'}}>
@@ -204,9 +250,8 @@ const ContentContainer = (props) => {
 								</span>
 							</div>
 						</Col>
-					</Row>
-	          		
-		        </Element>
+	                </Row>
+		        </div>
 		    </Row>
 		    <Row className="Content-element">
 		        <Element id="ryhmaliikunta-element" name="ryhmaliikunta" className="Image-container">
@@ -241,15 +286,21 @@ const ContentContainer = (props) => {
 		        </Element>
 		    </Row>
 
-		    <Row className="Content-element">
-		        <Element className="Image-container" name="aikataulut">
-		        	<Image src="http://placehold.it/1900x800" responsive />
-		        	<div className="Image-container-element">
-		        		<h1 className="Image-container-element-header">{`Aikataulut`}</h1>
-		        	</div>
+		   	<Row className="Content-element">
+		        <Element name="aikataulut" className="element aqua-border-right">
+		        	<Row>
+		        		<Col xs={12} md={4}>
+							<Image src="http://placehold.it/300" responsive />
+						</Col>
+						<Col xs={12} md={8}>
+			          		<div><h2>{`Aikataulut`}</h2></div>
+					    	<div><p>{`The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+
+Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.`}</p></div>
+					    </Col>
+					</Row>
 		        </Element>
 		    </Row>
-
 		    <Row className="Content-element">
 		        <Element className="Image-container" id="personal-trainer-element" name="personal_training">
 		        	<div className="Image-container-element">
@@ -292,7 +343,9 @@ const ContentContainer = (props) => {
 						</Col>
 						<Col xs={12} md={8}>
 			          		<div><h2>{`Yhteystiedot ja hinnasto`}</h2></div>
-					    	<div><p>{`Yhteystiedot ja hinnasto content`}</p></div>
+					    	<div><p>{`Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
+
+You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.`}</p></div>
 					    </Col>
 					</Row>
 		        </Element>

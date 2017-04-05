@@ -1,8 +1,9 @@
 import React from 'react';
 import {Events, scrollSpy, Link, scroller} from'react-scroll';
-import {Button, Collapse} from 'react-bootstrap';
+import {Button, Collapse, Image} from 'react-bootstrap';
 import ContentContainer from '../ContentContainer';
 import './NavBar.css';
+import logo from '../images/logo.png';
 
 export default class NavBar extends React.Component {
 
@@ -76,13 +77,14 @@ export default class NavBar extends React.Component {
 			<div className="navBar-container">
 				<div className="topBar flex">
 					<div className="flex-1">
-						<div className="flex">
-							<h1 className="logo-header">Aquarius sporting club</h1>
-							<i className="fa fa-facebook fa-2x flex-1"/>
-							<div id="language-options" className="flex" style={{marginRight: '15px'}}>
+						<div className="flex" style={{justifyContent: 'center'}}>
+							<div>
+								<Image height={75} src={logo} />
+							</div>
+							{/*<div id="language-options" className="flex" style={{marginRight: '15px'}}>
 								<div style={{marginRight: '10px', borderTop: '3px solid #32c5d2'}}>Suomeksi</div>
 								<div style={{marginTop: '3px'}}>Svenska</div>
-							</div>
+							</div>*/}
 						</div>
 						
 					</div>
@@ -143,14 +145,19 @@ export default class NavBar extends React.Component {
 									          Aikataulut
 									        </Link>
 									    </div>
-									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
-									          Yrityspalvelut
+									     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} offset={-150} duration={1000}>
+									          Personal trainer
 									        </Link>
 									    </div>
 									</div>
 
 									<div className="flex navlinks">
+										<div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+									          Yrityspalvelut
+									        </Link>
+									    </div>
 									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
 									    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
 									          Yhteystiedot ja hinnasto

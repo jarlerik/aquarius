@@ -6,6 +6,10 @@ body {
 	background-color: #32c5d2!important;
 }
 
+.space-between {
+	justify-content: space-between;
+}
+
 .footer {
 	padding: 5px 20px 10px 20px;
 	bottom: 0;
@@ -33,7 +37,7 @@ body {
 	background: white;
     margin-right: -20px!important;
     margin-left: -20px!important;
-    margin-bottom: 150px;
+    margin-bottom: 75px;
 }
 
 
