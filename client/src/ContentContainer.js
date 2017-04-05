@@ -1,7 +1,14 @@
 import React from 'react';
 import './ContentContainer.css';
 import {Element} from'react-scroll';
-import {Col, Image, Row} from 'react-bootstrap';
+import {Col, Image, Row, Button, ResponsiveEmbed} from 'react-bootstrap';
+import {utils} from 'react-bootstrap'
+import yrityspalvelutImg from './images/yrityspalvelut.jpg';
+import ryhmaliikuntaImg from './images/ryhmaliikunta.jpg';
+import personalTrainerImg from './images/personal_trainer.jpg';
+
+utils.bootstrapUtils.addStyle(Button, 'custom');
+
 
 
 const header = "Tie hyvään mieleen ja kuntoon kulkee Aquariuksen kautta!";
@@ -164,13 +171,24 @@ const yrityspalvelut = {
 	]
 };
 
+const pt = {
+	content: `Personal Trainer kuuntelee sinun tavoitteita sekä
+	toiveita ja muokkaa treenejä tarpeittesi mukaan.
+	Tapaamme tarpeesi mukaan yhdestä useampaan
+	kertaan, jotta lähtötasostasi riippumatta kehityt ja
+	saavutat tavoitteesi. Voimme keskittyä esim. oikeaan
+	tekniikkaan, motivaation löytämiseen, lajia tukevaan
+	harjoitteluun, ravitsemukseen tai uusiin
+	treenimuotoihin.`
+}
+
 
 
 const ContentContainer = (props) => {
 	return (
 
 		<div className="contentContainer">
-			<Row>
+			<Row className="Content-element">
 				<Element name="ajankohtaista" className="element aqua-border-left">
 					<Row>
 						<Col xs={12} md={8}>
@@ -190,22 +208,18 @@ const ContentContainer = (props) => {
 	          		
 		        </Element>
 		    </Row>
-		    <hr/>
-		    <Row>
-		        <Element name="ryhmaliikunta" className="element aqua-border-right">
-		        	<Row>
-		        		<Col xs={12} md={4}>
-							<Image src="http://placehold.it/300" responsive />
-						</Col>
-		        		<Col xs={12} md={8}>
-			          		<div><h2>{ryhmaliikunta.header}</h2></div>
-					    	<div><p>{ryhmaliikunta.text}</p></div>
-					    </Col>
-					</Row>
+		    <Row className="Content-element">
+		        <Element id="ryhmaliikunta-element" name="ryhmaliikunta" className="Image-container">
+		        	<div className="Image-container-element">
+		        		<h1 className="Image-container-element-header">{ryhmaliikunta.header}</h1>
+		        		<div className="Image-container-element-content">
+		        			<p>{ryhmaliikunta.text}</p>
+		        			<Button bsSize="large" bsStyle="custom">Varaa tunti</Button>
+		        		</div>
+		        	</div>
 		        </Element>
 		    </Row>
-		    <hr/>
-		    <Row>
+		    <Row className="Content-element">
 		        <Element name="harjoitukset" className="element">
 		        	<Row>
 		          		<div><h3>{ryhmaliikunta.exercises.header}</h3></div>
@@ -226,23 +240,32 @@ const ContentContainer = (props) => {
 					</Row>
 		        </Element>
 		    </Row>
-		    <hr/>
-		    <Row>
-		        <Element name="aikataulut" className="element aqua-border-right">
-		        	<Row>
-		        		<Col xs={12} md={4}>
-							<Image src="http://placehold.it/300" responsive />
-						</Col>
-						<Col xs={12} md={8}>
-			          		<div><h2>{`Aikataulut`}</h2></div>
-					    	<div><p>{`Aikataulut content`}</p></div>
-					    </Col>
-					</Row>
+
+		    <Row className="Content-element">
+		        <Element className="Image-container" name="aikataulut">
+		        	<Image src="http://placehold.it/1900x800" responsive />
+		        	<div className="Image-container-element">
+		        		<h1 className="Image-container-element-header">{`Aikataulut`}</h1>
+		        	</div>
 		        </Element>
 		    </Row>
-		    <hr/>
-		    <Row>
-		        <Element name="yrityspalvelut" className="element aqua-border-left">
+
+		    <Row className="Content-element">
+		        <Element className="Image-container" id="personal-trainer-element" name="personal_training">
+		        	<div className="Image-container-element">
+		        		<h1 className="Image-container-element-header">{`Personal trainer`}</h1>
+		        		<div className="Image-container-element-content">
+		        			<p>{pt.content}</p>
+		        		</div>
+		        	</div>
+		        </Element>
+		    </Row>
+
+
+		    
+
+		    <Row className="Content-element">
+		        <Element name="-" className="element aqua-border-left">
 		        	<Row>
 		        		<Col xs={12} md={8}>
 			          		<div><h2>{yrityspalvelut.header.text}</h2></div>
@@ -255,13 +278,13 @@ const ContentContainer = (props) => {
 					    	</div>
 					    </Col>
 					    <Col xs={12} md={4}>
-							<Image src="http://placehold.it/300" responsive />
+							<Image src={yrityspalvelutImg} responsive />
 						</Col>
 					</Row>
 		        </Element>
 		    </Row>
-		    <hr/>
-		    <Row>
+
+		    <Row className="Content-element">
 		        <Element name="yhteystiedot-hinnasto" className="element aqua-border-right">
 		        	<Row>
 		        		<Col xs={12} md={4}>
