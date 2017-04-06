@@ -2,8 +2,18 @@ h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif!important;
 }
 
+@media (min-width: 900px) {
+	p.ingress {
+		font-size: 26px;
+	}
+}
+
+p.ingress {
+	font-family: 'amiri', sans-serif;
+}
+
 body {
-	background-color: #32c5d2!important;
+	/*background-color: #32c5d2!important;*/
 }
 
 .space-between {
@@ -78,10 +88,4 @@ body {
 	background-image: url('./images/ryhmaliikunta.jpg');
     background-position: center center;
     background-size: cover;
-}
-
-@media (min-width: 900px) {
-	.Image-container-element-content {
-		font-size: 26px;
-	}
 }
