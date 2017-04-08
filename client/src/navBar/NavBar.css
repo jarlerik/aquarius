@@ -9,7 +9,7 @@
 }
 
 .NavBar-toggle {
-	margin: auto 10px;
+	margin: 10px;
 	color: #79a1ab;
 }
 
@@ -59,28 +59,10 @@ a:hover {
 	color: #32c5d2!important;
 }
 
-.flex {
-	display: flex;
-}
+.language-options-active {
+	margin-right: 10px;
+	border-top: 3px solid #5ba5b2;
 
-.flex-1 {
-	flex: 1;
-}
-
-.flex-5 {
-	flex: 3;
-}
-.topBar {
-	padding-bottom: 5px;
-}
-.topBar h1 {
-	margin: 0;
-	color: #32c5d2;
-}
-
-.topBar i {
-	color: #848484;
-    margin: 5px;
 }
 
 #language-options {

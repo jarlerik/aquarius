@@ -2,6 +2,24 @@ h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif!important;
 }
 
+.flex {
+	display: flex;
+}
+
+.flex-1 {
+	flex: 1;
+	display: flex;
+}
+
+.flex-5 {
+	flex: 3;
+	display: flex;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
 @media (min-width: 900px) {
 	p.ingress {
 		font-size: 26px;
@@ -11,43 +29,17 @@ h1, h2, h3 {
 p.ingress {
 	font-family: 'amiri', sans-serif;
 }
-
-body {
-	/*background-color: #32c5d2!important;*/
-}
+pe
 
 .space-between {
 	justify-content: space-between;
 }
 
-.footer {
-	padding: 5px 20px 10px 20px;
-	bottom: 0;
-	width: 100%;
-	background:	#fafafa;
-	box-shadow: 5px 5px 25px;
-	color: #666666;
-	font-family: "Rubik", sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 0.05em;
-}
-
-.footer i {
-	margin-right: 10px;
-}
-
-#contacts, #open {
-	margin: 0 20px;
-    border-left: 3px solid;
-    padding: 10px;
-}
 
 .Content-element {
 	background: white;
     margin-right: -20px!important;
     margin-left: -20px!important;
-    margin-bottom: 75px;
 }
 
 
@@ -56,36 +48,3 @@ body {
     color: white;
 }
 
-
-.Image-container-element {
-	
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3);
-    padding-top: 10%;
-}
-
-.Image-container-element-header {
-	color: white;
-	text-transform: uppercase;
-}
-
-.Image-container-element-content {
-	color: white;
-    font-family: 'amiri';
-    padding: 20px;
-}
-
-
-#personal-trainer-element {
-	background-image: url('./images/personal_trainer.jpg');
-    background-position: center center;
-    background-size: cover;
-}
-
-#ryhmaliikunta-element {
-	background-image: url('./images/ryhmaliikunta.jpg');
-    background-position: center center;
-    background-size: cover;
-}

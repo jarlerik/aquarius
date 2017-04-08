@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContentContainer.css';
 import {Element} from'react-scroll';
-import {Col, Image, Row, Button} from 'react-bootstrap';
+import {Col, Image, Row, Button, Table} from 'react-bootstrap';
 import {utils} from 'react-bootstrap'
 import yrityspalvelutImg from './images/yrityspalvelut.jpg';
 import moment from 'moment';
@@ -221,34 +221,46 @@ const ContentContainer = (props) => {
 					</div>
 					<div className="ajankohtaista-element">
 		          		<Row>
-		          			<Col xs={12} md={6} lg={6}>
+		          			<Col xs={12} md={8} lg={8}>
 				          		<div className="post-item-list">
-			                        {posts.map((post) => {
-			                            return (
-			                              <div className="post-item">
-			                                <div className="flex space-between">
-			                                  <div className="flex-8">
-			                                    <p className="post-header">{post.header}</p>
-			                                  </div>
-			                                  <div style={{margin: 'auto 0', color: '#ccc'}} className="flex-2">
-			                                    <span>{date}</span>
-			                                  </div>
-			                                </div>
-			                                <div className="post-item-content">
-			                                  <Row>
-			                                    <Col xs={12} md={12}>
-			                                      <p>{post.body}</p>
-			                                    </Col>
-			                                  </Row>
-			                                </div>
-			                              </div>
-			                            );
-			                          })
-			                        }
+				          			<Row>
+				                        {posts.map((post) => {
+				                            return (
+				                              	<Col xs={12} md={6} lg={6}>
+					                              	<div className="post-item">
+					                                	<Row>
+						                                  <Col xs={12} className="flex-8">
+						                                    <p  style={{color: '#5ba5b2'}} className="post-header">{post.header}</p>
+						                                  </Col>
+						                                  <Col xs={6} className="flex-2">
+						                                    
+						                                  </Col>
+					                                	</Row>
+						                                <div className="post-item-content">
+						                                  <Row>
+						                                    <Col xs={12} md={12}>
+						                                      <p style={{color: '#848484'}}>{post.body}</p>
+						                                    </Col>
+						                                  </Row>
+						                                  <Row>
+						                                  	<Col xs={6} style={{color: '#ccc'}}>
+						                                  		<p>{`Johanna`}</p>
+						                                  	</Col>
+						                                  	<Col xs={6}  style={{margin: 'auto 0', color: '#ccc'}}>
+						                                  		<p>{date}</p>
+						                                  	</Col>
+						                                  </Row>
+						                                </div>
+						                            </div>
+				                              	</Col>
+				                            );
+				                          })
+				                        }
+				                    </Row>
 			                     </div>
 			                </Col>
 
-		                     <Col xs={12} md={6} lg={6}>
+		                     <Col xs={12} md={3} lg={3}>
 								<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/aquariussporting" data-width="306" data-show-faces="true" data-stream="true" data-header="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306">
 									
 										<iframe name="f3d9bbdd3d41fe8" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F1FegrZjPbq3.js%3Fversion%3D42%23cb%3Df749e3b0a8094c%26domain%3Dwww.aquariussporting.fi%26origin%3Dhttp%253A%252F%252Fwww.aquariussporting.fi%252Ff36784c8d998ee8%26relation%3Dparent.parent&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306" style={{border: 'none', visibility: 'visible', width: '306px', height: '540px'}}>
@@ -271,15 +283,15 @@ const ContentContainer = (props) => {
 		        </Element>
 		    </Row>
 		    <Row className="Content-element">
-		        <Element name="harjoitukset" className="element">
+		        <Element name="harjoitukset" className="element harjoitukset-content">
 		        	<Row>
 		          		<div><h3>{ryhmaliikunta.exercises.header}</h3></div>
 				    	<div>
 				    		{
 				    			ryhmaliikunta.exercises.exerciseTypes.map((exercise) =>  {
 				    				return (
-				    					<Col xs={12} md={3}>
-				    						<div className="exercise aqua-border-top">
+				    					<Col xs={6} md={4}>
+				    						<div className="exercise exercise-border-top">
 					    						<p className="exercise-name">{exercise.name}</p>
 					    						<p className="exercice-description" >{exercise.description}</p>
 					    					</div>
@@ -304,63 +316,141 @@ const ContentContainer = (props) => {
 		        		{/*TODO: hae datasta */}
 		        	<Row>
 		        		<Col xs={12} md={6}>
-			        		<h2>{`PT-treenit`}</h2>
-			        		<p>{`Harjoittele turvallisesti, kehity ja saavuta tavoitteesi Personal Trainerin kanssa.`}</p>
-			        		<ul>
-			        			<li>{`Alkuhaastattelu (lähtötilanne & tavoitteet)`}</li>
-			        			<li>{`Henkilökohtainen treeniohjelma`}</li>
-			        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
+		        			<div className="personal-trainer-service">
+				        		<h2>{`PT-treenit`}</h2>
+				        		<p>{`Harjoittele turvallisesti, kehity ja saavuta tavoitteesi Personal Trainerin kanssa.`}</p>
+				        		<ul>
+				        			<li>{`Alkuhaastattelu (lähtötilanne & tavoitteet)`}</li>
+				        			<li>{`Henkilökohtainen treeniohjelma`}</li>
+				        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
 
-			        		</ul>
-			        		<p>{`1 x 60 €`}</p>
-			        		<p>{`3 x 170 € - vuosijäsen 155 €`}</p>
-			        		<p>{`5 x 270 € - vuosijäsen 250 €`}</p>
+				        		</ul>
+				        		<p>{`1 x 60 €`}</p>
+				        		<p>{`3 x 170 € - vuosijäsen 155 €`}</p>
+				        		<p>{`5 x 270 € - vuosijäsen 250 €`}</p>
+				        	</div>
 			        	</Col>
 			        	<Col xs={12} md={6}>
-			        		<h2>{`PT-Duo`}</h2>
-			        		<p>{`Treenaa yhdessä Personal Trainerin ja kaverin kanssa. Harjoittelua esim. vapailla painoilla, laitteissa tai kahvakuulalla.`}</p>
-			        		<ul>
-			        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
-			        		</ul>
-			        		<p>{`1 x 40 € - vuosijäsen 30 € / henkilö`}</p>
+			        		<div className="personal-trainer-service">
+				        		<h2>{`PT-Duo`}</h2>
+				        		<p>{`Treenaa yhdessä Personal Trainerin ja kaverin kanssa. Harjoittelua esim. vapailla painoilla, laitteissa tai kahvakuulalla.`}</p>
+				        		<ul>
+				        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
+				        		</ul>
+				        		<p>{`1 x 40 € - vuosijäsen 30 € / henkilö`}</p>
+				        	</div>
 			        	</Col>
 			        </Row>
 	        	</div>
 		    </Row>
-
-
-		    
-
 		    <Row className="Content-element">
-		        <Element name="yrityspalvelut" className="">
-		        	<div id="Yrityspalvelut-image-container">
+		        <Element className="Image-container" id="yrityspalvelut-element" name="yrityspalvelut">
+		        	<div className="Image-container-element">
 		        		<div><h2>{yrityspalvelut.header.text}</h2></div>
 		        	</div>
 		        </Element>
-		        <Row>
-	        		<Col xs={12} md={6}>
-				    	<div>
-				    		<p>{yrityspalvelut.paragraphs[0].text}</p>
-				    	</div>
-				    </Col>
-				    <Col xs={12} md={6}>
-				    	<div>
-				    		<p>{yrityspalvelut.paragraphs[1].text}</p>
-				    	</div>
-				    </Col>
-				</Row>
-				<Row>
-	        		<Col xs={12} md={6}>
-				    	<div>
-				    		<p>{yrityspalvelut.paragraphs[2].text}</p>
-				    	</div>
-				    </Col>
-				    <Col xs={12} md={6}>
-				    	<div>
-				    		<p>{yrityspalvelut.paragraphs[3].text}</p>
-				    	</div>
-				    </Col>
-				</Row>
+		        <div id="yrityspalvelut-content">
+			        <Row>
+		        		<Col xs={12} md={6}>
+					    	<div className="yrityspavelut-content-item">
+					    		<p>{yrityspalvelut.paragraphs[0].text}</p>
+					    	</div>
+					    </Col>
+					    <Col xs={12} md={6}>
+					    	<div className="yrityspavelut-content-item">
+					    		<p>{yrityspalvelut.paragraphs[1].text}</p>
+					    	</div>
+					    </Col>
+					</Row>
+					<Row>
+		        		<Col xs={12} md={6}>
+					    	<div className="yrityspavelut-content-item">
+					    		<p>{yrityspalvelut.paragraphs[2].text}</p>
+					    	</div>
+					    </Col>
+					    <Col xs={12} md={6}>
+					    	<div className="yrityspavelut-content-item">
+					    		<p>{yrityspalvelut.paragraphs[3].text}</p>
+					    	</div>
+					    </Col>
+					</Row>
+				</div>
+		    </Row>
+		{/*map API key: AIzaSyAHr67-kdbUxIDsDgmRY9mv4yD2KG51sFs*/}
+		    <Row className="Content-element footer">
+		        <Element name="yhteystiedot-hinnasto">
+		    		<div>
+			            <div style={{textAlign: 'center'}}>
+			              <h3>{`Aquarius sporting club`}</h3>
+			            </div>
+			            <Col xs={12} md={6}>
+			            	<div style={{textAlign: 'center'}}>
+			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
+			            	</div>
+			            	<div>
+			            		<Table responsive striped bordered condensed hover>
+								    <thead>
+								      <tr>
+								        <th>Vuosijäsenyys</th>
+								        <th>Kuukausi</th>
+								        <th>Opiskelija / eläkeläinen</th>
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td>VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
+								        <td></td>
+								        <td>65€</td>
+								      </tr>
+								      <tr>
+								        <td>Liikuntaryhmät</td>
+								        <td>55</td>
+								        <td></td>
+								      </tr>
+								      <tr>
+								        <td>Kuntosali. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
+								        <td>45€</td>
+								        <td></td>
+								      </tr>
+								      <tr>
+								      	<td>
+								      		+ liittymismaksu 20€
+								      	</td>
+								      	<td>
+								      	</td>
+								      	<td>
+								      	</td>
+								      </tr>
+								    </tbody>
+								  </Table>
+			            	</div>
+			            </Col>
+			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
+			            	<div style={{textAlign: 'center'}}>
+			            		<h4 style={{textTransform: 'uppercase'}}>{`Yhteystiedot`}</h4>
+			            		<Row style={{marginBottom: '10px'}}>
+			            			<Col xs={2}>
+			            				<i className="fa fa-map-marker fa-2x" />
+			            			</Col>
+			            			<Col xs={10}>
+			            				<p style={{textAlign: 'start'}}>{`Kauppakeskus Strand Rantatie 3, 2 krs 10210 Inkoo`}</p>
+			            			</Col>
+			            		</Row>
+			            		<Row>
+			            			<Col xs={2}>
+			            				<i className="fa fa-phone fa-2x" />
+			            			</Col>
+			            			<Col xs={10}>
+			            				<p  style={{textAlign: 'start'}}>{`(09) 2230 9402`}</p>
+			            			</Col>
+			            		</Row>
+			            	</div>
+			            	<div style={{boxShadow: '0px 0px 10px 5px #dcd4d4', marginTop: '10px'}}>
+			            		<iframe height="250" frameborder="0" style={{border: '0', width: '100%'}} src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJmdm2GWqYjUYRwNgrVXo47Bo&key=AIzaSyAHr67-kdbUxIDsDgmRY9mv4yD2KG51sFs" allowfullscreen></iframe>
+			            	</div>
+			            </Col>
+		          	</div>
+		        </Element>
 		    </Row>
 		</div>
 	);

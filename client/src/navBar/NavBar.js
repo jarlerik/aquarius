@@ -71,24 +71,24 @@ export default class NavBar extends React.Component {
   	this.setState({naviOpen: false});
   }
 
-
 	render() {
 		return (
 			<div className="navBar-container">
-				<div className="topBar flex">
-					<div className="flex-1">
-						<div className="flex" style={{justifyContent: 'center'}}>
-							{/*<div id="language-options" className="flex" style={{marginRight: '15px'}}>
-								<div style={{marginRight: '10px', borderTop: '3px solid #32c5d2'}}>Suomeksi</div>
-								<div style={{marginTop: '3px'}}>Svenska</div>
-							</div>*/}
+				<div>
+					<div className="flex">
+						<div className="flex-1">
+							<Image height={100} src={logo} />
 						</div>
-						
-					</div>
-				</div>
-				<div className="flex">
-					<div>
-						<Image height={75} src={logo} />
+						<div className="flex-1 flex-end">
+							<div id="language-options" className="flex" style={{marginRight: '15px'}}>
+								<div className="language-options-active" >Suomeksi</div>
+								<div  className="language-options-unactive" style={{marginTop: '3px'}}>Svenska</div>
+							</div>
+							<div id="toggler" className="small-visible">
+						        { this.state.naviOpen && <i className="fa fa-times fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  false})} />}
+						        { !this.state.naviOpen && <i className="fa fa-bars fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  true})} />}
+						    </div>
+					    </div>
 					</div>
 					<div className="flex navlinks medium-visible">
 				    	<div style={{cursor: 'pointer'}}>
@@ -123,51 +123,45 @@ export default class NavBar extends React.Component {
 					    </div>
 				    </div>
 				    <div className="small-visible">
-				    	<div>
-					        <i className="fa fa-bars fa-2x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen: !this.state.naviOpen })} />
-					        <Collapse in={this.state.naviOpen}>
-					          <div>
-					          		<div className="flex navlinks">
-								    	<div style={{cursor: 'pointer'}}>
-									    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
-									          Ajankohtaista
-									        </Link>
-									    </div>
-									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
-									          Ryhmäliikunta
-									        </Link>
-									    </div>
-									</div>
-
-									<div className="flex navlinks">
-									    
-									     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} offset={-150} duration={1000}>
-									          Personal trainer
-									        </Link>
-									    </div>
-									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
-									          Yrityspalvelut
-									        </Link>
-									    </div>
-									</div>
-
-									<div className="flex navlinks">
-									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
-									          Yhteystiedot ja hinnasto
-									        </Link>
-									    </div>
-									    <div style={{cursor: 'pointer'}}>
-									    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
-									          Aikataulut
-									        </a>
-									    </div>
-									</div>
-							    </div>
-					        </Collapse>
+				    	<div class="flex">
+				    		<div>
+						        <Collapse in={this.state.naviOpen}>
+						          	<div>
+						          		<div className="navlinks">
+									    	<div style={{cursor: 'pointer'}}>
+										    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
+										          Ajankohtaista
+										        </Link>
+										    </div>
+										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
+										    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
+										          Ryhmäliikunta
+										        </Link>
+										    </div>
+										     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
+										    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} offset={-150} duration={1000}>
+										          Personal trainer
+										        </Link>
+										    </div>
+										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
+										    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+										          Yrityspalvelut
+										        </Link>
+										    </div>
+										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
+										    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
+										          Yhteystiedot ja hinnasto
+										        </Link>
+										    </div>
+										    <div style={{cursor: 'pointer'}}>
+										    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
+										          Aikataulut
+										        </a>
+										    </div>
+										</div>
+								    </div>
+						        </Collapse>
+						    </div>
 					    </div>
 					</div>
 			    </div>

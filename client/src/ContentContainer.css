@@ -1,6 +1,6 @@
 .contentContainer {
-	margin: 10px 0px 10px 0px;
-    padding: 100px 20px 20px 20px;
+	margin: 10px 0px 0px 0px;
+    padding: 100px 20px 0px 20px;
 }
 /*
 .contentContainer h2 {
@@ -26,8 +26,8 @@
 	border-right: 3px solid #5ba5b2;	
 } 
 
-.aqua-border-top {
-	border-top: 3px solid #5ba5b2;
+.exercise-border-top {
+	border-top: 3px solid #f63c98;
 } 
 .exercise-name, .post-header {
 	font-weight: bold;
@@ -38,28 +38,24 @@
 	border-left: 1px solid #eee;
     padding-left: 10px;
     font-family: "Rubik", sans-serif;
+    color: #848484;
 }
 
 .exercise {
 	 padding-top: 5px;
-	 min-height: 200px;
+	 min-height: 120px;
+     margin-bottom: 30px;
 
 }
 
 .post-item {
 	margin-bottom: 20px;
-	border-top: 3px solid #5ba5b2;
-}
-
-
-#ajankohtaista-element {
-	background-image: url('./images/puntti.png');
-    background-position: center center;
-    background-size: cover;
-    margin-right: -20px!important;
-    margin-left: -20px!important;
-    margin-top: 75px;
-    min-height: 300px;
+	border-left: 3px solid #5ba5b2;
+    background-color: white;
+    min-height: 120px;
+    padding: 10px 5px 5px 5px;
+    box-shadow: 5px 5px 5px #eee;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #ajankohtaista-element-content-wrapper {
@@ -76,7 +72,6 @@
 }
 
 #ajankohtaista-element-begin {
-	/*background: #5ba5b2;*/
 	color: white;
 	font-family: 'Montserrat', sans-serif!important;
 	min-height: 200px;
@@ -86,22 +81,113 @@
     background-size: cover;
 }
 
+.harjoitukset-content {
+    padding: 20px;
+}
+
+.Image-container-element {
+    
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding-top: 5%;
+    color: white;
+    min-height: 300px;
+}
+
+.Image-container-element-header {
+    color: white;
+    text-transform: uppercase;
+}
+
+.Image-container-element-content {
+    color: white;
+    font-family: 'amiri';
+    padding: 20px;
+}
+
+
 #ajankohtaista-element-wrapper {
 	height: 100%;
     min-height: 200px;
     background: rgba(0, 0, 0, 0.51);
 }
 
-#Yrityspalvelut-image-container {
+#yrityspalvelut-element {
 	background-image: url('./images/yrityspalvelut.jpg');
     background-position: center center;
-    background-size: cover;	
-    min-height: 300px;
-    color: white;
-    text-align: center;
-    padding-top: 5%;
+    background-size: cover;
 }
+
+#yrityspalvelut-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.yrityspavelut-content-item {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-height: 120px;
+    border-left: 3px solid #666666;
+    font-family: 'Montserrat';
+    color: #848484;
+    box-shadow: 5px 5px 5px #eee;
+}
+
+#personal-trainer-element {
+    background-image: url('./images/personal_trainer.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+#ryhmaliikunta-element {
+    background-image: url('./images/ryhmaliikunta.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
 
 .ajankohtaista-element {
 	padding: 20px;
+    background-color: #fafafa;
+}
+
+#personal-trainer-content {
+    background-color: #fafafa;
+    padding: 30px 20px 50px 20px;
+}
+
+.personal-trainer-service {
+    background: white;
+    min-height: 300px;
+    border-left: 5px solid #5ba5b2;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 5px #dedcdc;
+    font-family: 'montserrat', sans-serif;
+    color: #848484;
+}
+
+.personal-trainer-service > h2 {
+    color: #5ba5b2;
+}
+
+.footer {
+    padding: 5px 20px 10px 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 25px;
+    color: #666666;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+th, tr {
+    background-color: white;
 }
