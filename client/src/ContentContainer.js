@@ -388,28 +388,28 @@ const ContentContainer = (props) => {
 			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
 			            	</div>
 			            	<div>
-			            		<Table responsive striped bordered condensed hover>
+			            		<Table striped bordered condensed hover>
 								    <thead>
 								      <tr>
-								        <th>Vuosijäsenyys</th>
-								        <th>Kuukausi</th>
+								        <th style={{textAlign: 'center'}}>Vuosijäsenyys</th>
+								        <th></th>
 								        <th>Opiskelija / eläkeläinen</th>
 								      </tr>
 								    </thead>
 								    <tbody>
 								      <tr>
 								        <td>VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
+								        <td>65€/kk</td>
 								        <td></td>
-								        <td>65€</td>
 								      </tr>
 								      <tr>
 								        <td>Liikuntaryhmät</td>
-								        <td>55</td>
+								        <td>55€/kk</td>
 								        <td></td>
 								      </tr>
 								      <tr>
 								        <td>Kuntosali. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
-								        <td>45€</td>
+								        <td>45€/kk</td>
 								        <td></td>
 								      </tr>
 								      <tr>
@@ -421,8 +421,77 @@ const ContentContainer = (props) => {
 								      	<td>
 								      	</td>
 								      </tr>
+								      <tr style={{textAlign: 'center'}}>
+								      	<td>
+								      		<span style={{fontWeight: 'bold'}}>Muut</span>
+								      	</td>
+								      	<td>
+								      	</td>
+								      	<td>
+								      	</td>
+								      </tr>
+								      <tr>
+								      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>JA</span> liikuntaryhmät</td>
+								      	<td>80€/kk</td>
+								      	<td></td>
+								      </tr>
+								       <tr>
+								      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>TAI</span> liikuntaryhmät</td>
+								      	<td>65€/kk</td>
+								      	<td>60€/kk</td>
+								      </tr>
+								       <tr>
+								      	<td>Päiväpassi</td>
+								      	<td>15€</td>
+								      	<td>10€</td>
+								      </tr>
+								      <tr>
+								      	<td>10 x kortti, henkilökohtainen, 6 kk</td>
+								      	<td>100€</td>
+								      	<td>80€</td>
+								      </tr>
+								       <tr>
+								      	<td>Inbody</td>
+								      	<td>35€</td>
+								      	<td></td>
+								      </tr>
 								    </tbody>
 								  </Table>
+			            	</div>
+			            	<div>
+			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{`Avoinna`}</h4>
+			            		<Row>
+				            		<Col xs={6}>
+				            			{`Maanantai - torstai`}
+				            		</Col>
+				            		<Col xs={6}>
+				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 21:00`}</span>
+				            		</Col>
+				            	</Row>
+				            	<Row>
+				            		<Col xs={6}>
+				            			{`Perjantai`}
+				            		</Col>
+				            		<Col xs={6}>
+				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 20:00`}</span>
+				            		</Col>
+				            	</Row>
+				            	<Row>
+				            		<Col xs={6}>
+				            			{`Lauantai`}
+				            		</Col>
+				            		<Col xs={6}>
+				            			<span style={{fontWeight: 'bold'}}>{`09:00 - 18:00`}</span>
+				            		</Col>
+				            	</Row>
+				            	<Row>
+				            		<Col xs={6}>
+				            			{`Sunnutai`}
+				            		</Col>
+				            		<Col xs={6}>
+				            			<span style={{fontWeight: 'bold'}}>{`14:00 - 20:00`}</span>
+				            		</Col>
+				            	</Row>
 			            	</div>
 			            </Col>
 			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
