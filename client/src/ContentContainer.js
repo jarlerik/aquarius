@@ -383,11 +383,7 @@ const ContentContainer = (props) => {
 			            <div style={{textAlign: 'center'}}>
 			              <h3>{`Aquarius sporting club`}</h3>
 			            </div>
-			            <Col xs={12} md={6}>
-			            	<div style={{textAlign: 'center'}}>
-			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
-			            	</div>
-			            	<div>
+			            <div>
 			            		<Table striped bordered condensed hover>
 								    <thead>
 								      <tr>
@@ -457,6 +453,10 @@ const ContentContainer = (props) => {
 								      </tr>
 								    </tbody>
 								  </Table>
+			            	</div>
+			            <Col xs={12} md={6}>
+			            	<div style={{textAlign: 'center'}}>
+			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
 			            	</div>
 			            	<div>
 			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{`Avoinna`}</h4>
