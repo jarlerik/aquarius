@@ -36,6 +36,10 @@
 	font-family: 'Montserrat', sans-serif!important;
 }
 
+.navlinks > .active-section > a {
+	color: #5ba5b2;
+}
+
 .navlinks > div > a {
 	color: #848484;
 }
@@ -71,5 +75,9 @@ a:hover {
 
 #site-name {
 	text-align: center;
+}
+
+#toggler {
+	padding: 20px;
 }
 

@@ -10,15 +10,14 @@ export default class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			naviOpen: false
+			naviOpen: false,
+			activeSection: 'ajankohtaista'
 		}
 	}
 
 	componentDidMount() {
 
-    Events.scrollEvent.register('begin', (args) => {
-    	console.log("scrollEvent started..", args)
-    });
+    Events.scrollEvent.register('begin', this.closeNavi.bind(this));
 
     Events.scrollEvent.register('end', this.setActiveNavi.bind(this));
 
@@ -91,7 +90,7 @@ export default class NavBar extends React.Component {
 					    </div>
 					</div>
 					<div className="flex navlinks medium-visible">
-				    	<div style={{cursor: 'pointer'}}>
+				    	<div style={{cursor: 'pointer'}} className={this.state.activeSection === "ajankohtaista" ? "active-section" : "unactive-section"}>
 					    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
 					          Ajankohtaista
 					        </Link>
