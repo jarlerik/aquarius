@@ -74,15 +74,15 @@ export default class NavBar extends React.Component {
 		return (
 			<div className="navBar-container">
 				<div>
+					<div id="language-options" className="flex" style={{marginRight: '15px', justifyContent: 'flex-end'}}>
+						<div className="language-options-active" >Suomeksi</div>
+						<div  className="language-options-unactive" style={{marginTop: '3px'}}>Svenska</div>
+					</div>
 					<div className="flex">
 						<div className="flex-1">
 							<Image height={100} src={logo} />
 						</div>
 						<div className="flex-1 flex-end">
-							<div id="language-options" className="flex" style={{marginRight: '15px'}}>
-								<div className="language-options-active" >Suomeksi</div>
-								<div  className="language-options-unactive" style={{marginTop: '3px'}}>Svenska</div>
-							</div>
 							<div id="toggler" className="small-visible">
 						        { this.state.naviOpen && <i className="fa fa-times fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  false})} />}
 						        { !this.state.naviOpen && <i className="fa fa-bars fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  true})} />}
