@@ -469,28 +469,28 @@ const ContentContainer = (props) => {
 									<h5>{`Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.`}</h5>
 								</div>
 								<Row>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket1Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket2Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket3Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket4Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket5Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket6Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket7Img} /></div>
 									</Col>
-									<Col xs={4} md={3}>
+									<Col xs={2} md={3}>
 										<div className="ticketImage"><Image responsive src={ticket8Img} /></div>
 									</Col>
 								</Row>
