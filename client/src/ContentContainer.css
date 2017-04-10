@@ -198,6 +198,7 @@ th, tr {
     border-bottom: 3px solid #666666;
     margin-bottom: 20px;
     color: #88b7bf;
+    max-width: 100%;
 }
 
 .ticketImage {

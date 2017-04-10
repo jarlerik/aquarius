@@ -2,6 +2,7 @@ h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif!important;
 }
 
+
 .flex {
 	display: flex;
 }
@@ -13,12 +14,12 @@ h1, h2, h3 {
 
 .flex-3 {
 	flex: 3;
-	display: flex;
 }
 
 .flex-5 {
 	flex: 5;
 	display: flex;
+
 }
 
 .flex-8 {
