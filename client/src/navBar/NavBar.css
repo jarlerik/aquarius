@@ -36,7 +36,7 @@
 	font-family: 'Montserrat', sans-serif!important;
 }
 
-.navlinks > .active-section > a {
+.navlinks > div > a.active {
 	color: #5ba5b2;
 }
 

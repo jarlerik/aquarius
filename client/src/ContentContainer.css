@@ -191,3 +191,37 @@
 th, tr {
     background-color: white;
 }
+
+.ticket-container {
+    background: #f9f9f9;
+    padding: 20px 10px 20px 10px;
+    border-bottom: 3px solid #666666;
+    margin-bottom: 20px;
+    color: #88b7bf;
+}
+
+.ticketImage {
+    min-width: 150px;
+    min-height: 80px;
+    margin: 10px 5px 10px 5px;
+}
+
+
+.first-row {
+    background:  #88b7bf;
+    color: #fff
+}
+
+.open-at {
+    font-size: 18px;
+    margin: 5px 0 5px 0;
+}
+
+.yhteystiedot p {
+    font-size: 18px;
+}
+
+
+.contact-item {
+    padding: 5px;
+}

@@ -83,28 +83,28 @@ export default class NavBar extends React.Component {
 							<Image height={100} src={logo} />
 						</div>
 						<div className="flex flex-3 navlinks medium-visible">
-					    	<div style={{cursor: 'pointer'}} className={this.state.activeSection === "ajankohtaista" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
+					    	<div style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}>
 						          Ajankohtaista
 						        </Link>
 						    </div>
-						    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
+						    <div style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" to="ryhmaliikunta" spy={true} offset={-200} smooth={true} duration={1000}>
 						          Ryhmäliikunta
 						        </Link>
 						    </div>
-						    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} offset={-150} duration={1000}>
+						    <div style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} offset={-200} smooth={true} duration={1000}>
 						          Personal trainer
 						        </Link>
 						    </div>
-						    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+						    <div style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} offset={-200} smooth={true} duration={1000}>
 						          Yrityspalvelut
 						        </Link>
 						    </div>
-						    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
-						    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
+						    <div style={{cursor: 'pointer'}}>
+						    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} offset={-200} smooth={true} duration={1000}>
 						          Yhteystiedot ja hinnasto
 						        </Link>
 						    </div>
@@ -120,6 +120,9 @@ export default class NavBar extends React.Component {
 						        { !this.state.naviOpen && <i className="fa fa-bars fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  true})} />}
 						    </div>
 					    </div>
+					    <div style={{margin: 'auto', padding: '10px'}}>
+							  <a style={{color: '#5ba5b2'}} href="https://www.facebook.com/aquariussporting"><i className="fa fa-facebook fa-3x"></i></a>
+					    </div>
 					</div>
 				    <div className="small-visible">
 				    	<div class="flex">
@@ -128,27 +131,27 @@ export default class NavBar extends React.Component {
 						          	<div>
 						          		<div className="navlinks">
 									    	<div style={{cursor: 'pointer'}}>
-										    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} offset={-250} duration={1000}>
+										    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} duration={1000}>
 										          Ajankohtaista
 										        </Link>
 										    </div>
 										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} offset={-150} duration={1000}>
+										    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} duration={1000}>
 										          Ryhmäliikunta
 										        </Link>
 										    </div>
 										     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} offset={-150} duration={1000}>
+										    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000}>
 										          Personal trainer
 										        </Link>
 										    </div>
 										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} offset={-150} duration={1000}>
+										    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000}>
 										          Yrityspalvelut
 										        </Link>
 										    </div>
 										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} offset={-150} duration={1000}>
+										    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000}>
 										          Yhteystiedot ja hinnasto
 										        </Link>
 										    </div>

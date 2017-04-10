@@ -11,13 +11,31 @@ h1, h2, h3 {
 	display: flex;
 }
 
-.flex-5 {
+.flex-3 {
 	flex: 3;
+	display: flex;
+}
+
+.flex-5 {
+	flex: 5;
+	display: flex;
+}
+
+.flex-8 {
+	flex: 8;
 	display: flex;
 }
 
 .flex-end {
 	justify-content: flex-end;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-center {
+	justify-content: center;
 }
 
 @media (min-width: 900px) {

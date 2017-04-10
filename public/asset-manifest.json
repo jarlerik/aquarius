@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.5d1a893f.css",
-  "main.css.map": "static/css/main.5d1a893f.css.map",
-  "main.js": "static/js/main.20f8c74d.js",
-  "main.js.map": "static/js/main.20f8c74d.js.map",
+  "main.css": "static/css/main.7bf8140c.css",
+  "main.css.map": "static/css/main.7bf8140c.css.map",
+  "main.js": "static/js/main.00cd8407.js",
+  "main.js.map": "static/js/main.00cd8407.js.map",
   "static/media/ajankohtaista_background.jpg": "static/media/ajankohtaista_background.88d13198.jpg",
   "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
   "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.89889688.svg",
@@ -12,5 +12,12 @@
   "static/media/logo.png": "static/media/logo.f0f285f3.png",
   "static/media/personal_trainer.jpg": "static/media/personal_trainer.08f85b8b.jpg",
   "static/media/ryhmaliikunta.jpg": "static/media/ryhmaliikunta.dd83646e.jpg",
+  "static/media/ticket1.png": "static/media/ticket1.1b518f5b.png",
+  "static/media/ticket2.png": "static/media/ticket2.45b8155b.png",
+  "static/media/ticket3.png": "static/media/ticket3.25609bdf.png",
+  "static/media/ticket4.png": "static/media/ticket4.ee7e82c0.png",
+  "static/media/ticket5.png": "static/media/ticket5.e0dadada.png",
+  "static/media/ticket6.png": "static/media/ticket6.1ebf14e9.png",
+  "static/media/ticket8.png": "static/media/ticket8.cfe8e083.png",
   "static/media/yrityspalvelut.jpg": "static/media/yrityspalvelut.e5a48c63.jpg"
 }

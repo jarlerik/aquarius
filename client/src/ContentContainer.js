@@ -4,6 +4,14 @@ import {Element} from'react-scroll';
 import {Col, Image, Row, Button, Table} from 'react-bootstrap';
 import {utils} from 'react-bootstrap'
 import yrityspalvelutImg from './images/yrityspalvelut.jpg';
+import ticket1Img from './images/ticket1.png';
+import ticket2Img from './images/ticket2.png';
+import ticket3Img from './images/ticket3.png';
+import ticket4Img from './images/ticket4.png';
+import ticket5Img from './images/ticket5.png';
+import ticket6Img from './images/ticket6.png';
+import ticket7Img from './images/ticket7.png';
+import ticket8Img from './images/ticket8.png';
 import moment from 'moment';
 
 utils.bootstrapUtils.addStyle(Button, 'custom');
@@ -283,7 +291,7 @@ const ContentContainer = (props) => {
 		        </Element>
 		    </Row>
 		    <Row className="Content-element">
-		        <Element name="harjoitukset" className="element harjoitukset-content">
+		        <div className="element harjoitukset-content">
 		        	<Row>
 		          		<div><h3>{ryhmaliikunta.exercises.header}</h3></div>
 				    	<div>
@@ -301,7 +309,7 @@ const ContentContainer = (props) => {
 				    		}
 				    	</div>
 					</Row>
-		        </Element>
+		        </div>
 		    </Row>
 		    <Row className="Content-element">
 		        <Element className="Image-container" id="personal-trainer-element" name="personal_training">
@@ -380,87 +388,121 @@ const ContentContainer = (props) => {
 		    <Row className="Content-element footer">
 		        <Element name="yhteystiedot-hinnasto">
 		    		<div>
-			            <div style={{textAlign: 'center'}}>
-			              <h3>{`Aquarius sporting club`}</h3>
-			            </div>
 			            <div>
 			            	<div style={{textAlign: 'center'}}>
 			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
 			            	</div>
 			            	<Table striped bordered condensed hover>
-								    <thead>
-								      <tr>
-								        <th style={{textAlign: 'center'}}>Vuosijäsenyys</th>
-								        <th></th>
-								        <th>Opiskelija / eläkeläinen</th>
-								      </tr>
-								    </thead>
-								    <tbody>
-								      <tr>
-								        <td>VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
-								        <td>65€/kk</td>
-								        <td></td>
-								      </tr>
-								      <tr>
-								        <td>Liikuntaryhmät</td>
-								        <td>55€/kk</td>
-								        <td></td>
-								      </tr>
-								      <tr>
-								        <td>Kuntosali. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
-								        <td>45€/kk</td>
-								        <td></td>
-								      </tr>
-								      <tr>
-								      	<td>
-								      		+ liittymismaksu 20€
-								      	</td>
-								      	<td>
-								      	</td>
-								      	<td>
-								      	</td>
-								      </tr>
-								      <tr style={{textAlign: 'center'}}>
-								      	<td>
-								      		<span style={{fontWeight: 'bold'}}>Muut</span>
-								      	</td>
-								      	<td>
-								      	</td>
-								      	<td>
-								      	</td>
-								      </tr>
-								      <tr>
-								      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>JA</span> liikuntaryhmät</td>
-								      	<td>80€/kk</td>
-								      	<td></td>
-								      </tr>
-								       <tr>
-								      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>TAI</span> liikuntaryhmät</td>
-								      	<td>65€/kk</td>
-								      	<td>60€/kk</td>
-								      </tr>
-								       <tr>
-								      	<td>Päiväpassi</td>
-								      	<td>15€</td>
-								      	<td>10€</td>
-								      </tr>
-								      <tr>
-								      	<td>10 x kortti, henkilökohtainen, 6 kk</td>
-								      	<td>100€</td>
-								      	<td>80€</td>
-								      </tr>
-								       <tr>
-								      	<td>Inbody</td>
-								      	<td>35€</td>
-								      	<td></td>
-								      </tr>
-								    </tbody>
-								  </Table>
+							    <thead>
+							      <tr>
+							        <th className="first-row" style={{textAlign: 'center'}}>Vuosijäsenyys</th>
+							        <th className="first-row"></th>
+							        <th className="first-row"></th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							      <tr>
+							        <td>VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
+							        <td>65€/kk</td>
+							        <td></td>
+							      </tr>
+							      <tr>
+							        <td>Liikuntaryhmät</td>
+							        <td>55€/kk</td>
+							        <td></td>
+							      </tr>
+							      <tr>
+							        <td>Kuntosali. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
+							        <td>45€/kk</td>
+							        <td></td>
+							      </tr>
+							      <tr>
+							      	<td>
+							      		Liittymismaksu
+							      	</td>
+							      	<td>
+							      		20€
+							      	</td>
+							      	<td>
+							      	</td>
+							      </tr>
+							      <tr></tr>
+							      <tr className="table-split" style={{textAlign: 'center'}}>
+							      	<td className="first-row">
+							      		<span style={{fontWeight: 'bold'}}>Muut</span>
+							      	</td>
+							      	<td className="first-row">
+							      	</td>
+							      	<td className="first-row">
+							      	Opiskelija / eläkeläinen
+							      	</td>
+							      </tr>
+							      <tr>
+							      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>JA</span> liikuntaryhmät</td>
+							      	<td>80€/kk</td>
+							      	<td></td>
+							      </tr>
+							       <tr>
+							      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>TAI</span> liikuntaryhmät</td>
+							      	<td>65€/kk</td>
+							      	<td>60€/kk</td>
+							      </tr>
+							       <tr>
+							      	<td>Päiväpassi</td>
+							      	<td>15€</td>
+							      	<td>10€</td>
+							      </tr>
+							      <tr>
+							      	<td>10 x kortti, henkilökohtainen, 6 kk</td>
+							      	<td>100€</td>
+							      	<td>80€</td>
+							      </tr>
+							       <tr>
+							      	<td>Inbody</td>
+							      	<td>35€</td>
+							      	<td></td>
+							      </tr>
+							    </tbody>
+							</Table>
+							<div className="ticket-container">
+								<div>
+									<h5>{`Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.`}</h5>
+								</div>
+								<div className="flex flex-wrap">
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket1Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket2Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket3Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket4Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket5Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket6Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket7Img} /></div>
+									</div>
+									<div className="flex-1 flex-center">
+										<div className="ticketImage"><Image responsive src={ticket8Img} /></div>
+									</div>
+								</div>
+								<div>
+									<p>{`Pidätämme oikeudet muutoksiin.`}</p>
+								</div>
+							</div>
 			            </div>
 			            <Col xs={12} md={6}>
 			            	<div>
 			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{`Avoinna`}</h4>
-			            		<Row>
+			            		<Row className="open-at">
 				            		<Col xs={6}>
 				            			{`Maanantai - torstai`}
 				            		</Col>
@@ -468,7 +510,7 @@ const ContentContainer = (props) => {
 				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 21:00`}</span>
 				            		</Col>
 				            	</Row>
-				            	<Row>
+				            	<Row className="open-at">
 				            		<Col xs={6}>
 				            			{`Perjantai`}
 				            		</Col>
@@ -476,7 +518,7 @@ const ContentContainer = (props) => {
 				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 20:00`}</span>
 				            		</Col>
 				            	</Row>
-				            	<Row>
+				            	<Row className="open-at">
 				            		<Col xs={6}>
 				            			{`Lauantai`}
 				            		</Col>
@@ -484,9 +526,9 @@ const ContentContainer = (props) => {
 				            			<span style={{fontWeight: 'bold'}}>{`09:00 - 18:00`}</span>
 				            		</Col>
 				            	</Row>
-				            	<Row>
+				            	<Row className="open-at">
 				            		<Col xs={6}>
-				            			{`Sunnutai`}
+				            			{`Sunnuntai`}
 				            		</Col>
 				            		<Col xs={6}>
 				            			<span style={{fontWeight: 'bold'}}>{`14:00 - 20:00`}</span>
@@ -495,24 +537,41 @@ const ContentContainer = (props) => {
 			            	</div>
 			            </Col>
 			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
-			            	<div style={{textAlign: 'center'}}>
+			            	<div className="yhteystiedot" style={{textAlign: 'center'}}>
 			            		<h4 style={{textTransform: 'uppercase'}}>{`Yhteystiedot`}</h4>
-			            		<Row style={{marginBottom: '10px'}}>
-			            			<Col xs={2}>
-			            				<i className="fa fa-map-marker fa-2x" />
-			            			</Col>
-			            			<Col xs={10}>
-			            				<p style={{textAlign: 'start'}}>{`Kauppakeskus Strand Rantatie 3, 2 krs 10210 Inkoo`}</p>
-			            			</Col>
-			            		</Row>
-			            		<Row>
-			            			<Col xs={2}>
-			            				<i className="fa fa-phone fa-2x" />
-			            			</Col>
-			            			<Col xs={10}>
+			            		<div className="contact-item flex" style={{marginBottom: '10px'}}>
+			            			<div className="flex-1 flex-center">
+			            				<span className="fa-stack fa-lg">
+										  <i className="fa fa-circle fa-stack-2x"/>
+										  <i className="fa fa-map-marker fa-stack-1x fa-inverse"/>
+										</span>
+			            			</div>
+			            			<div className="flex-5">
+			            				<p style={{textAlign: 'start'}}>{`Kauppakeskus Strand 2krs, Rantatie 3, 10210 Inkoo`}</p>
+			            			</div>
+			            		</div>
+			            		<div className="contact-item flex">
+			            			<div className="flex-1 flex-center">
+			            				<span className="fa-stack fa-lg">
+										  <i className="fa fa-circle fa-stack-2x"/>
+										  <i className="fa fa-phone fa-stack-1x fa-inverse"/>
+										</span>
+			            			</div>
+			            			<div className="flex-5">
 			            				<p  style={{textAlign: 'start'}}>{`(09) 2230 9402`}</p>
-			            			</Col>
-			            		</Row>
+			            			</div>
+			            		</div>
+			            		<div className="contact-item flex">
+			            			<div className="flex-1 flex-center">
+			            				<span className="fa-stack fa-lg">
+										  <i className="fa fa-circle fa-stack-2x"/>
+										  <i className="fa fa-envelope fa-stack-1x fa-inverse"/>
+										</span>
+			            			</div>
+			            			<div className="flex-5">
+			            				<p  style={{textAlign: 'start'}}>{` aquarius[at]aquariussporting.fi`}</p>
+			            			</div>
+			            		</div>
 			            	</div>
 			            	<div style={{boxShadow: '0px 0px 10px 5px #dcd4d4', marginTop: '10px'}}>
 			            		<iframe height="250" frameborder="0" style={{border: '0', width: '100%'}} src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJmdm2GWqYjUYRwNgrVXo47Bo&key=AIzaSyAHr67-kdbUxIDsDgmRY9mv4yD2KG51sFs" allowfullscreen></iframe>
