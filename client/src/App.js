@@ -3,18 +3,29 @@ import './App.css';
 import NavBar from './navBar/NavBar';
 import ContentContainer from './ContentContainer';
 
-const appContent = [
-  {id: 'home', content: 'Home page content'},
-  {is: 'about', content: 'About page content'}
-];
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      locale: 'fi'
+    }
+  }
+
+  setLocale(locale) {
+    this.setState({locale});
+  }
 
   render() {
     return (
       <div className="App">
-          <NavBar appContent={appContent}/>
-          <ContentContainer />
+          <NavBar
+            {...this.state}
+            setLocale={this.setLocale.bind(this)}
+          />
+          <ContentContainer {...this.state}/>
       </div>
     );
   }

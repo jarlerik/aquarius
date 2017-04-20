@@ -14,180 +14,13 @@ import ticket7Img from './images/ticket7.png';
 import ticket8Img from './images/ticket8.png';
 import moment from 'moment';
 
+//content
+import news from './data/news.js'
+import groupExercise from './data/groupExercise.js';
+import personalTrainer from './data/personalTrainer.js';
+import enterpriseService from './data/enterpriseService.js';
+
 utils.bootstrapUtils.addStyle(Button, 'custom');
-
-
-
-const header = "Tie hyvään mieleen ja kuntoon";
-
-const p1 = `Meillä voit kuntoilla valoisissa tiloissa, joista avautuu upea
-
-merinäköala. Käytettävissäsi ovat Technogymin huippumodernit
-
-laitteet, mm. Selection Line sekä Kinesis, missä voit treenata
-
-lihasvoimaa, tasapainoa sekä liikkuvuutta – kaikkea yhtä aikaa!
-
-Olet myös tervetullut kokeilemaan erilaisia Les Millsin tunteja
-
-sekä meidän muita jumppia.`
-
-const p2 = `Kuntoilun jälkeen voit rentoutua viihtyisässä saunassa.
-
-Hyvä treeni virkistää sekä mielesi, että kehosi ja olet täynnä
-
-energiaa!`
-
-const ryhmaliikunta = {
-	header: `Ryhmäliikunta`,
-	text: `Ryhmäliikunta on hauskaa ja liikkeet oppii nopeasti.
-			Tunnit sopivat kaikille: miehille ja naisille aloittelijoista
-			edistyneisiin.
-			Tunnit kestävät 30-70 minuuttia. Liiku monipuolisesti
-			yhdistellen erilaisia tunteja.
-			Voit varata paikan etukäteen tunneille osoitteessa
-			aquarius.bypolar.fi
-			Nettivarauksia varten tarvitset tunnuksen ja salasanan,
-			jotka saat Aquariuksen vastaanotosta.`,
-
-	exercises : {
-		header: 'Ryhmäliikuntatuntimme',
-		exerciseTypes: [
-			{
-				name: 'BodyBalance®',
-				description: `LesMills Bodybalance on joogaan, taichiin ja pilatekseen perustuva
-					harjoittelumuoto. Tunnilla tehdään erilaisia kehon tasapainoa, liikkuvuutta
-					ja rentoutumista edistäviä liikkeitä. Harjoituksen aikana ei käytetä kenkiä
-					tai sukkia.`
-			},
-			{
-				name: 'BodyCombat®',
-				description: `BodyCombat on tunti, missä on paljon voimaa ja energiaa. Käytät
-					tekniikoita eri taistelulajeista kuten karate, teakwondo, capoeira,
-					nyrkkeily, muay thai ja tai chi.`
-			},
-			{
-				name: 'BodyPump®',
-				description: `Yksinkertaista, mutta haastavaa musiikin tahtiin tehtävää
-					voimaharjoittelua koko vartalolle. Välineenä on levytanko painoineen.
-					Vastuksen voit helposti säätää omaan kuntotasoosi sopivaksi.`
-			},
-			{
-				name: 'BodyVive®',
-				description: `BodyVive on cross-training tunti, jossa keskitytään nostamaan sykettä,
-					vahvistamaan lihaksia ja parantamaan keskivartalon hallintaa.`
-			},
-			{
-				name: 'CxWorx®',
-				description: `Tämän tehokkaan core-treenin liikkeet kehittävät funktionaalista voimaa
-					sekä vahvistavat vatsa- ja pakaralihaksia. CX30 on puolituntia kestävä
-					harjoitus, joka haastaa sekä vartalon että keskittymiskyvyn.`
-			},
-			{
-				name: 'Fatburning bike',
-				description: `Tehokasta kestävyysharjoittelua spinningpyörällä. Tavoitteena on edistää
-					rasvanpolttoa ja haasta kehoa ja mieltä. Hiki kyllä tulee!`
-			},
-			{
-				name: 'Fatburn',
-				description: `Monipuolinen tunti, mikä sisältää sykkeennostoja ja lihaskuntoa. Liikkeet
-					tehdään sekä kehonpainolla, että myös step-laudan, käsipainojen, tangon
-					ja kahvakuulan avulla. Helppo ja hauska tunti.`
-			},
-			{
-				name: 'Flex and Stretch',
-				description: `Kehonhuolto, missä tehdään erilaisia aktiivisia liikkeitä ja venytyksiä, joilla
-					parannetaan kehon liikkuvuutta ja hyvinvointia.`
-			},
-			{
-				name: 'Grit Plyo®',
-				description: `Cardio tehdään ilman välineitä. Tunnilla hyödynnetään kehon omaa painoa
-					kestävyyskunnon parantamiseksi erittäin intensiivisillä harjoituksilla.
-					Korkea energiakulutus.`
-			},
-			{
-				name: 'Grit Strength®',
-				description: `Maksimoi lihasvoimasi! Käytetään harjoitteluvastuksina levytankoa, -
-					painoja ja step-lautaa. Grit Strength on harjoitus, jonka tulokset huomaat
-					lihaskunnossasi nopeasti.`
-			},
-			{
-				name: 'Kahvakuula',
-				description: `Tehokas lihaskuntopainotteinen tunti. Harjoittelulla kehitetään
-					lihaskunnon lisäksi kehonhallintaa, tasapainoa, kestävyyttä ja liikkuvuutta.
-					Sopii kaiken kuntoisille. Kahvakuulan avulla säästät aikaa ja vaivaa, mutta
-					et tingi tehosta.`
-			},
-			{
-				name: 'Kinesis',
-				description: `Tapa harjoittaa niin kehoa kuin mieltä vapaiden ja luonnollisten liikkeiden
-					kautta. Harjoitat samaan aikaan voimaa, tasapainoa ja notkeutta. Kaikki
-					harjoitukset yhdessä kokonaisuudessa.`
-			},
-			{
-				name: 'Kinesis 65 +',
-				description: `Helppoa ja hauskaa liikuntaa. 60 + kiertoharjoittelutunti.`
-			},
-			{
-				name: 'Roller',
-				description: `Roller - kehonhuoltotunnilla suoritetaan monipuolisia kehonhuoltoon
-					tähtääviä liikkeitä rullaa (foam roller) apuna käyttäen. Tunnilla
-					vahvistetaan lihaksia ja lisätään liikkuvuutta aktiivisilla venytyksillä ja
-					rentoutetaan lihaksia sekä lihaskalvoja erilaisilla rullauksilla.`
-			},
-
-		]
-	}
-};
-
-
-const yrityspalvelut = {
-
-	header: {
-			text: `Tervetuloa viettämään liikunta- ja virkistyspäivää
-				Aquarius Sporting Clubille! Räätälöimme yrityksellesi
-				yksilölliset liikunta- ja virkistyspäivät meren rannalla.`
-	},
-
-	paragraphs: [
-		
-		{
-			text: `Päivään voi kuulua erilasia ryhmäliikuntamuotoja, esim. Kinesis,
-				BodyVive, Kahvakuula tai Terveselkä jumppa. Muihin vaihtoehtoihin voit
-				tutustua ryhmäliikunta sivuilla tai toivoa terveysliikuntapainotteista
-				ohjelmaa, mikä on suunniteltu erityisesti teitä varten.`
-		},
-
-		{
-			text: `Teidän on mahdollisuus käyttää myös InBody mittauslaitetta kehon
-				koostumuksen selvittämiseen. InBodylla mitataan vaivattomasti mm.
-				solun sisäiset- ja ulkoiset nesteet, proteiinimassa, mineraalit, rasvamassa,
-				painoindeksi sekä kehon lihastasapaino.`
-		},
-		{
-			text: `Liikunnan jälkeen voitte rentoutua saunassa. Tarjoamme tarvittaessa
-				myös kokoustilat yrityksesi käyttöön ja tarjoilusta vastaa alakerrassa
-				Ravintola Sågen.`
-		},
-		{
-			text: `Lisätietoja ja tarjouspyynnöt: aquarius@aquariussporting.fi
-				Meillä käy maksuvälineenä myös useat henkilöstöetuina käytettävät kortit
-				ja setelit, joten työntekijöiden on halutessaan vaivatonta jatkaa
-				liikuntaharrastusta.`
-		}
-	]
-};
-
-const pt = {
-	content: `Personal Trainer kuuntelee sinun tavoitteita sekä
-	toiveita ja muokkaa treenejä tarpeittesi mukaan.
-	Tapaamme tarpeesi mukaan yhdestä useampaan
-	kertaan, jotta lähtötasostasi riippumatta kehityt ja
-	saavutat tavoitteesi. Voimme keskittyä esim. oikeaan
-	tekniikkaan, motivaation löytämiseen, lajia tukevaan
-	harjoitteluun, ravitsemukseen tai uusiin
-	treenimuotoihin.`
-}
 
 const posts = [
   {
@@ -204,12 +37,13 @@ const posts = [
   }
 ];
 
-moment.locale('fi');
-const date = moment().format('LL');
+
 
 
 
 const ContentContainer = (props) => {
+	moment.locale(props.locale);
+	const date = moment().format('LL');
 	return (
 		<div className="contentContainer">
 			<Row className="Content-element">
@@ -217,11 +51,11 @@ const ContentContainer = (props) => {
 					<div id="ajankohtaista-element-begin">
 						<div id="ajankohtaista-element-wrapper">
 							<div style={{paddingTop: '5%'}}>
-								<div><h2>{header}</h2></div>
+								<div><h2>{news[props.locale].header}</h2></div>
 								<Row style={{marginBottom: '50px'}}>
 									<Col xs={12} md={12}>
-								    	<div><p className="ingress">{p1}</p></div>
-								    	<div><p className="ingress">{p2}</p></div>
+								    	<div><p className="ingress">{news[props.locale].p1}</p></div>
+								    	<div><p className="ingress">{news[props.locale].p2}</p></div>
 								    </Col>
 								</Row>
 							</div>
@@ -282,10 +116,12 @@ const ContentContainer = (props) => {
 		    <Row className="Content-element">
 		        <Element id="ryhmaliikunta-element" name="ryhmaliikunta" className="Image-container">
 		        	<div className="Image-container-element">
-		        		<h1 className="Image-container-element-header">{ryhmaliikunta.header}</h1>
+		        		<h1 className="Image-container-element-header">{groupExercise[props.locale].header}</h1>
 		        		<div className="Image-container-element-content">
-		        			<p className="ingress" >{ryhmaliikunta.text}</p>
-		        			<Button bsSize="large" bsStyle="custom">Varaa tunti</Button>
+		        			<p className="ingress" >{groupExercise[props.locale].text}</p>
+		        			<a target="_blank" href="http://aquarius.bypolar.fi">
+		        				<Button bsSize="large" bsStyle="custom">{groupExercise[props.locale].button}</Button>
+		        			</a>
 		        		</div>
 		        	</div>
 		        </Element>
@@ -293,15 +129,15 @@ const ContentContainer = (props) => {
 		    <Row className="Content-element">
 		        <div className="element harjoitukset-content">
 		        	<Row>
-		          		<div><h3>{ryhmaliikunta.exercises.header}</h3></div>
+		          		<div><h3>{groupExercise.exercises.header[props.locale]}</h3></div>
 				    	<div>
 				    		{
-				    			ryhmaliikunta.exercises.exerciseTypes.map((exercise) =>  {
+				    			groupExercise.exercises.exerciseTypes.map((exercise) =>  {
 				    				return (
 				    					<Col xs={6} md={4}>
 				    						<div className="exercise exercise-border-top">
-					    						<p className="exercise-name">{exercise.name}</p>
-					    						<p className="exercice-description" >{exercise.description}</p>
+					    						<p className="exercise-name">{exercise[props.locale].name}</p>
+					    						<p className="exercice-description" >{exercise[props.locale].description}</p>
 					    					</div>
 				    					</Col>
 				    					);
@@ -316,36 +152,35 @@ const ContentContainer = (props) => {
 		        	<div className="Image-container-element">
 		        		<h1 className="Image-container-element-header">{`Personal trainer`}</h1>
 		        		<div className="Image-container-element-content">
-		        			<p className="ingress">{pt.content}</p>
+		        			<p className="ingress">{personalTrainer.pt[props.locale].content}</p>
 		        		</div>
 		        	</div>
 		        </Element>
 		        <div id="personal-trainer-content">
-		        		{/*TODO: hae datasta */}
 		        	<Row>
 		        		<Col xs={12} md={6}>
 		        			<div className="personal-trainer-service">
-				        		<h2>{`PT-treenit`}</h2>
-				        		<p>{`Harjoittele turvallisesti, kehity ja saavuta tavoitteesi Personal Trainerin kanssa.`}</p>
+				        		<h2>{personalTrainer.pt[props.locale].h2}</h2>
+				        		<p>{personalTrainer.pt[props.locale].p}</p>
 				        		<ul>
-				        			<li>{`Alkuhaastattelu (lähtötilanne & tavoitteet)`}</li>
-				        			<li>{`Henkilökohtainen treeniohjelma`}</li>
-				        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
+				        			<li>{personalTrainer.pt[props.locale].li1}</li>
+				        			<li>{personalTrainer.pt[props.locale].li2}</li>
+				        			<li>{personalTrainer.pt[props.locale].li3}</li>
 
 				        		</ul>
-				        		<p>{`1 x 60 €`}</p>
-				        		<p>{`3 x 170 € - vuosijäsen 155 €`}</p>
-				        		<p>{`5 x 270 € - vuosijäsen 250 €`}</p>
+				        		<p>{personalTrainer.pt[props.locale].price1}</p>
+				        		<p>{personalTrainer.pt[props.locale].price2}</p>
+				        		<p>{personalTrainer.pt[props.locale].price3}</p>
 				        	</div>
 			        	</Col>
 			        	<Col xs={12} md={6}>
 			        		<div className="personal-trainer-service">
-				        		<h2>{`PT-Duo`}</h2>
-				        		<p>{`Treenaa yhdessä Personal Trainerin ja kaverin kanssa. Harjoittelua esim. vapailla painoilla, laitteissa tai kahvakuulalla.`}</p>
+				        		<h2>{personalTrainer.duo[props.locale].h2}</h2>
+				        		<p>{personalTrainer.duo[props.locale].p}</p>
 				        		<ul>
-				        			<li>{`Tarvittaessa InBody tai ravitsemusneuvonta 30 €`}</li>
+				        			<li>{personalTrainer.duo[props.locale].li}</li>
 				        		</ul>
-				        		<p>{`1 x 40 € - vuosijäsen 30 € / henkilö`}</p>
+				        		<p>{personalTrainer.duo[props.locale].price}</p>
 				        	</div>
 			        	</Col>
 			        </Row>
@@ -354,31 +189,35 @@ const ContentContainer = (props) => {
 		    <Row className="Content-element">
 		        <Element className="Image-container" id="yrityspalvelut-element" name="yrityspalvelut">
 		        	<div className="Image-container-element">
-		        		<div><h2>{yrityspalvelut.header.text}</h2></div>
+		        		<div>
+		        			<h1 className="Image-container-element-header" >{enterpriseService[props.locale].header.h1}</h1>
+		        			<p className="ingress">{enterpriseService[props.locale].header.text}</p>
+		        		</div>
 		        	</div>
+		        	
 		        </Element>
 		        <div id="yrityspalvelut-content">
 			        <Row>
 		        		<Col xs={12} md={6}>
-					    	<div className="yrityspavelut-content-item">
-					    		<p>{yrityspalvelut.paragraphs[0].text}</p>
+					    	<div className="yrityspavelut-content-item ">
+					    		<p>{enterpriseService[props.locale].paragraphs[0].text}</p>
 					    	</div>
 					    </Col>
 					    <Col xs={12} md={6}>
 					    	<div className="yrityspavelut-content-item">
-					    		<p>{yrityspalvelut.paragraphs[1].text}</p>
+					    		<p>{enterpriseService[props.locale].paragraphs[1].text}</p>
 					    	</div>
 					    </Col>
 					</Row>
 					<Row>
 		        		<Col xs={12} md={6}>
 					    	<div className="yrityspavelut-content-item">
-					    		<p>{yrityspalvelut.paragraphs[2].text}</p>
+					    		<p>{enterpriseService[props.locale].paragraphs[2].text}</p>
 					    	</div>
 					    </Col>
 					    <Col xs={12} md={6}>
 					    	<div className="yrityspavelut-content-item">
-					    		<p>{yrityspalvelut.paragraphs[3].text}</p>
+					    		<p>{enterpriseService[props.locale].paragraphs[3].text}</p>
 					    	</div>
 					    </Col>
 					</Row>
@@ -544,7 +383,7 @@ const ContentContainer = (props) => {
 										  <i className="fa fa-map-marker fa-stack-1x fa-inverse"/>
 										</span>
 			            			</div>
-			            			<div className="flex-5">
+			            			<div className="flex flex-5">
 			            				<p style={{textAlign: 'start'}}>{`Kauppakeskus Strand 2krs, Rantatie 3, 10210 Inkoo`}</p>
 			            			</div>
 			            		</div>
@@ -555,7 +394,7 @@ const ContentContainer = (props) => {
 										  <i className="fa fa-phone fa-stack-1x fa-inverse"/>
 										</span>
 			            			</div>
-			            			<div className="flex-5">
+			            			<div className="flex flex-5">
 			            				<p  style={{textAlign: 'start'}}>{`(09) 2230 9402`}</p>
 			            			</div>
 			            		</div>
@@ -566,7 +405,7 @@ const ContentContainer = (props) => {
 										  <i className="fa fa-envelope fa-stack-1x fa-inverse"/>
 										</span>
 			            			</div>
-			            			<div className="flex-5">
+			            			<div className="flex flex-5">
 			            				<p  style={{textAlign: 'start'}}>{` aquarius[at]aquariussporting.fi`}</p>
 			            			</div>
 			            		</div>

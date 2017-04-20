@@ -4,6 +4,7 @@ import {Button, Collapse, Image} from 'react-bootstrap';
 import ContentContainer from '../ContentContainer';
 import './NavBar.css';
 import logo from '../images/logo.png';
+import classnames from 'classnames';
 
 export default class NavBar extends React.Component {
 
@@ -70,104 +71,148 @@ export default class NavBar extends React.Component {
   	this.setState({naviOpen: false});
   }
 
-	render() {
-		return (
-			<div className="navBar-container">
-				<div>
-					<div id="language-options" className="flex" style={{marginRight: '15px', justifyContent: 'flex-end'}}>
-						<div className="language-options-active" >Suomeksi</div>
-						<div  className="language-options-unactive" style={{marginTop: '3px'}}>Svenska</div>
+render() {
+	const navigation = {
+		updates: {
+			fi: 'Ajankohtaista',
+	  		sv: 'Aktuellt'
+		},
+		groupExercise: {
+			fi: 'Ryhmäliikunta',
+			sv: 'Groupmotion'
+		},
+		personalTrainer: {
+			fi: 'Personal trainer',
+			sv: 'Personal trainer'
+		},
+		enterpriseServices: {
+			fi: 'Yrityspalvelut',
+			sv: 'Företagservice'
+		},
+		contactAndPrices: {
+			fi: 'Yhteystiedot ja hinnasto',
+			sv: 'Kontaktuppgifter och priser'
+		},
+		open: {
+			fi: 'Aikataulut',
+			sv: 'Tidtabell'
+		}
+
+	}
+	return (
+		<div className="navBar-container">
+			<div>
+				<div id="language-options" className="flex" style={{marginRight: '15px', justifyContent: 'flex-end'}}>
+					<div
+						onClick={() => {this.props.setLocale('fi')}}	
+						className={classnames({
+							"language-options-first": true,
+							"language-options-active": this.props.locale === 'fi',
+							"language-options-unactive": this.props.locale !== 'fi'
+						})}
+						style={{cursor: 'pointer'}}>
+							Suomeksi
 					</div>
-					<div className="flex">
-						<div className="flex-1">
-							<Image height={100} src={logo} />
-						</div>
-						<div className="flex flex-3 navlinks medium-visible">
-					    	<div style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}>
-						          Ajankohtaista
-						        </Link>
-						    </div>
-						    <div style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" to="ryhmaliikunta" spy={true} offset={-200} smooth={true} duration={1000}>
-						          Ryhmäliikunta
-						        </Link>
-						    </div>
-						    <div style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} offset={-200} smooth={true} duration={1000}>
-						          Personal trainer
-						        </Link>
-						    </div>
-						    <div style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} offset={-200} smooth={true} duration={1000}>
-						          Yrityspalvelut
-						        </Link>
-						    </div>
-						    <div style={{cursor: 'pointer'}}>
-						    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} offset={-200} smooth={true} duration={1000}>
-						          Yhteystiedot ja hinnasto
-						        </Link>
-						    </div>
-						    <div style={{cursor: 'pointer'}}>
-						    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
-						          Aikataulut
-						        </a>
-						    </div>
-					    </div>
-						<div className="flex-1 flex-end small-visible">
-							<div id="toggler">
-						        { this.state.naviOpen && <i className="fa fa-times fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  false})} />}
-						        { !this.state.naviOpen && <i className="fa fa-bars fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  true})} />}
-						    </div>
-					    </div>
-					    <div style={{margin: 'auto', padding: '10px'}}>
-							  <a style={{color: '#5ba5b2'}} href="https://www.facebook.com/aquariussporting"><i className="fa fa-facebook fa-3x"></i></a>
-					    </div>
+					<div
+						onClick={() => {this.props.setLocale('sv')}}
+						className={classnames({
+							"language-options-active": this.props.locale === 'sv',
+							"language-options-unactive": this.props.locale !== 'sv'
+						})}
+						style={{cursor: 'pointer'}}>
+							Svenska
 					</div>
-				    <div className="small-visible">
-				    	<div class="flex">
-				    		<div>
-						        <Collapse in={this.state.naviOpen}>
-						          	<div>
-						          		<div className="navlinks">
-									    	<div style={{cursor: 'pointer'}}>
-										    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} duration={1000}>
-										          Ajankohtaista
-										        </Link>
-										    </div>
-										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} duration={1000}>
-										          Ryhmäliikunta
-										        </Link>
-										    </div>
-										     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000}>
-										          Personal trainer
-										        </Link>
-										    </div>
-										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000}>
-										          Yrityspalvelut
-										        </Link>
-										    </div>
-										    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
-										    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000}>
-										          Yhteystiedot ja hinnasto
-										        </Link>
-										    </div>
-										    <div style={{cursor: 'pointer'}}>
-										    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
-										          Aikataulut
-										        </a>
-										    </div>
-										</div>
-								    </div>
-						        </Collapse>
-						    </div>
-					    </div>
+				</div>
+				<div className="flex">
+					<div className="flex-1">
+						<Image height={100} src={logo} />
 					</div>
-			    </div>
-	        </div>
-		);
+					<div className="flex flex-3 navlinks medium-visible">
+				    	<div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}>
+					          {navigation.updates[this.props.locale]}
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" to="ryhmaliikunta" spy={true} offset={-200} smooth={true} duration={1000}>
+					          {navigation.groupExercise[this.props.locale]}
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} offset={-200} smooth={true} duration={1000}>
+					          {navigation.personalTrainer[this.props.locale]}
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} offset={-200} smooth={true} duration={1000}>
+					          {navigation.enterpriseServices[this.props.locale]}
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}}>
+					    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} offset={-200} smooth={true} duration={1000}>
+					          {navigation.contactAndPrices[this.props.locale]}
+					        </Link>
+					    </div>
+					    <div style={{cursor: 'pointer'}}>
+					    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
+					          {navigation.open[this.props.locale]}
+					        </a>
+					    </div>
+				    </div>
+					<div className="flex-1 flex-end small-visible">
+						<div id="toggler">
+					        { this.state.naviOpen && <i className="fa fa-times fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  false})} />}
+					        { !this.state.naviOpen && <i className="fa fa-bars fa-3x NavBar-toggle" onClick={ ()=> this.setState({ naviOpen:  true})} />}
+					    </div>
+				    </div>
+				    <div style={{margin: 'auto', padding: '10px'}}>
+						  <a target="_blank" style={{color: '#5ba5b2'}} href="https://www.facebook.com/aquariussporting"><i className="fa fa-facebook fa-3x"></i></a>
+				    </div>
+				</div>
+			    <div className="small-visible">
+			    	<div class="flex">
+			    		<div>
+					        <Collapse in={this.state.naviOpen}>
+					          	<div>
+					          		<div className="navlinks">
+								    	<div style={{cursor: 'pointer'}}>
+									    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} duration={1000}>
+									          {navigation.updates[this.props.locale]}
+									        </Link>
+									    </div>
+									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} duration={1000}>
+									          {navigation.groupExercise[this.props.locale]}
+									        </Link>
+									    </div>
+									     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000}>
+									          {navigation.personalTrainer[this.props.locale]}
+									        </Link>
+									    </div>
+									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000}>
+									          {navigation.enterpriseServices[this.props.locale]}
+									        </Link>
+									    </div>
+									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
+									    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000}>
+									          {navigation.contactAndPrices[this.props.locale]}
+									        </Link>
+									    </div>
+									    <div style={{cursor: 'pointer'}}>
+									    	<a href="https://aquarius.bypolar.fi/web/1/webPage.html" target="new">
+									          {navigation.open[this.props.locale]}
+									        </a>
+									    </div>
+									</div>
+							    </div>
+					        </Collapse>
+					    </div>
+				    </div>
+				</div>
+		    </div>
+        </div>
+	);
 	}
 }

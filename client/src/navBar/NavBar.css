@@ -63,10 +63,17 @@ a:hover {
 	color: #32c5d2!important;
 }
 
-.language-options-active {
+.language-options-first {
 	margin-right: 10px;
+}
+
+.language-options-active {
 	border-top: 3px solid #5ba5b2;
 
+}
+
+.language-options-unactive {
+	margin-top: 3px;
 }
 
 #language-options {
