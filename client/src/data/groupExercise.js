@@ -7,8 +7,7 @@ export default {
 				edistyneisiin.
 				Tunnit kestävät 30-70 minuuttia. Liiku monipuolisesti
 				yhdistellen erilaisia tunteja.
-				Voit varata paikan etukäteen tunneille osoitteessa
-				aquarius.bypolar.fi
+				Voit varata paikan etukäteen tunneille.
 				Nettivarauksia varten tarvitset tunnuksen ja salasanan,
 				jotka saat Aquariuksen vastaanotosta.`,
 
@@ -49,6 +48,20 @@ export default {
 						description: `LesMills Bodybalance grundar sig på jooga, tai chi och pilates.
 							Vi tränar balans, rörlighet och avslappning.
 							Under träningen använder vi inte skor eller strumpor.`
+				}
+			},
+			{
+				fi: {
+						name: 'Body Challenge',
+
+						description: `Treeni kiehittää lihas- ja räjähtävää voimaa sekä aerobista kuntoa. 
+							Kovaa treeniä korkealla energiankulutuksella!`
+				},
+				sv: {
+						name: 'Body Challenge',
+
+						description: `Treeni kiehittää lihas- ja räjähtävää voimaa sekä aerobista kuntoa. 
+							Kovaa treeniä korkealla energiankulutuksella! Samma på svenska.`
 				}
 			},
 			{
@@ -211,6 +224,27 @@ export default {
 				sv: {
 						name: 'Kinesis 65 +',
 						description: `Lätt och rolig cirkelträning. 60 + egen cirkelträningstimme.`		
+				}
+			},
+			,
+			{
+				fi: {	
+						name: 'Mamma babyjumppa',
+						description: `Suunnattu vauvojen vanhempien tai raskaana olevien hyvinvoinnin ja fyysisen kunnon ylläpitoon, sekä parantamiseen.`
+					},
+				sv: {
+						name: 'Mamma Babyjumppa',
+						description: `Riktad åt föräldrar med babyn eller gravida för att upprätthålla och förbättra välmåendet och den fysiska konditionen.`		
+				}
+			},
+			{
+				fi: {	
+						name: 'Puistojumppa',
+						description: `Strandin nurmikentällä. Sateella sisällä. 5 €/kerta tai voimassaoleva jumppakortti. Oma alusta`
+					},
+				sv: {
+						name: 'Parkjumppa',
+						description: `Gräsplanen Strand. Vid regn inomhus. 5 €/gång eller giltigt jumppakort. Eget underlag.`		
 				}
 			},
 			{

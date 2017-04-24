@@ -1,7 +1,6 @@
 import React from 'react';
 import {Events, scrollSpy, Link, scroller} from'react-scroll';
-import {Button, Collapse, Image} from 'react-bootstrap';
-import ContentContainer from '../ContentContainer';
+import {Collapse, Image} from 'react-bootstrap';
 import './NavBar.css';
 import logo from '../images/logo.png';
 import classnames from 'classnames';

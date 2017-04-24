@@ -1,7 +1,7 @@
 export default {
 	fi: {
 		header: {
-			h1: `Yritypalvelut`,
+			h1: `Yrityspalvelut`,
 			text: `Tervetuloa viettämään liikunta- ja virkistyspäivää
 				Aquarius Sporting Clubille! Räätälöimme yrityksellesi
 				yksilölliset liikunta- ja virkistyspäivät meren rannalla.`

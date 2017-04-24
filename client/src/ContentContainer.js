@@ -3,7 +3,6 @@ import './ContentContainer.css';
 import {Element} from'react-scroll';
 import {Col, Image, Row, Button, Table} from 'react-bootstrap';
 import {utils} from 'react-bootstrap'
-import yrityspalvelutImg from './images/yrityspalvelut.jpg';
 import ticket1Img from './images/ticket1.png';
 import ticket2Img from './images/ticket2.png';
 import ticket3Img from './images/ticket3.png';
@@ -19,6 +18,9 @@ import news from './data/news.js'
 import groupExercise from './data/groupExercise.js';
 import personalTrainer from './data/personalTrainer.js';
 import enterpriseService from './data/enterpriseService.js';
+import prices from './data/prices.js';
+import open from './data/open.js';
+import contact from './data/contact.js';
 
 utils.bootstrapUtils.addStyle(Button, 'custom');
 
@@ -223,44 +225,43 @@ const ContentContainer = (props) => {
 					</Row>
 				</div>
 		    </Row>
-		{/*map API key: AIzaSyAHr67-kdbUxIDsDgmRY9mv4yD2KG51sFs*/}
 		    <Row className="Content-element footer">
 		        <Element name="yhteystiedot-hinnasto">
 		    		<div>
 			            <div>
 			            	<div style={{textAlign: 'center'}}>
-			            		<h4 style={{textTransform: 'uppercase'}}>{`Hinnasto`}</h4>
+			            		<h4 style={{textTransform: 'uppercase'}}>{prices[props.locale].h4}</h4>
 			            	</div>
 			            	<Table striped bordered condensed hover>
 							    <thead>
 							      <tr>
-							        <th className="first-row" style={{textAlign: 'center'}}>Vuosijäsenyys</th>
+							        <th className="first-row" style={{textAlign: 'center'}}>{prices[props.locale].tableHeader}</th>
 							        <th className="first-row"></th>
 							        <th className="first-row"></th>
 							      </tr>
 							    </thead>
 							    <tbody>
 							      <tr>
-							        <td>VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
-							        <td>65€/kk</td>
+							        <td>{prices[props.locale].tr1td1}</td>
+							        <td>{prices[props.locale].tr1td2}</td>
 							        <td></td>
 							      </tr>
 							      <tr>
-							        <td>Liikuntaryhmät</td>
-							        <td>55€/kk</td>
+							        <td>{prices[props.locale].tr2td1}</td>
+							        <td>{prices[props.locale].tr2td2}</td>
 							        <td></td>
 							      </tr>
 							      <tr>
-							        <td>Kuntosali. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa</td>
-							        <td>45€/kk</td>
+							        <td>{prices[props.locale].tr3td1}</td>
+							        <td>{prices[props.locale].tr3td2}</td>
 							        <td></td>
 							      </tr>
 							      <tr>
 							      	<td>
-							      		Liittymismaksu
+							      		{prices[props.locale].tr4td1}
 							      	</td>
 							      	<td>
-							      		20€
+							      		{prices[props.locale].tr4td2}
 							      	</td>
 							      	<td>
 							      	</td>
@@ -268,42 +269,43 @@ const ContentContainer = (props) => {
 							      <tr></tr>
 							      <tr className="table-split" style={{textAlign: 'center'}}>
 							      	<td className="first-row">
-							      		<span style={{fontWeight: 'bold'}}>Muut</span>
+							      		<span style={{fontWeight: 'bold'}}>{prices[props.locale].tr5td1}</span>
 							      	</td>
 							      	<td className="first-row">
 							      	</td>
 							      	<td className="first-row">
-							      	Opiskelija / eläkeläinen
+							      	{prices[props.locale].tr5td2}
 							      	</td>
 							      </tr>
 							      <tr>
-							      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>JA</span> liikuntaryhmät</td>
-							      	<td>80€/kk</td>
+							      	<td>{prices[props.locale].tr6td1}</td>
+							      	<td>{prices[props.locale].tr6td2}</td>
 							      	<td></td>
 							      </tr>
 							       <tr>
-							      	<td>Kuukausikortti kuntosali <span style={{fontWeight: 'bold'}}>TAI</span> liikuntaryhmät</td>
-							      	<td>65€/kk</td>
-							      	<td>60€/kk</td>
+							      	<td>{prices[props.locale].tr7td1}</td>
+							      	<td>{prices[props.locale].tr7td2}</td>
+							      	<td>{prices[props.locale].tr7td3}</td>
 							      </tr>
 							       <tr>
-							      	<td>Päiväpassi</td>
-							      	<td>15€</td>
-							      	<td>10€</td>
+							      	<td>{prices[props.locale].tr8td1}</td>
+							      	<td>{prices[props.locale].tr8td2}</td>
+							      	<td>{prices[props.locale].tr8td3}</td>
 							      </tr>
 							      <tr>
-							      	<td>10 x kortti, henkilökohtainen, 6 kk</td>
-							      	<td>100€</td>
-							      	<td>80€</td>
+							      	<td>{prices[props.locale].tr9td1}</td>
+							      	<td>{prices[props.locale].tr9td2}</td>
+							      	<td>{prices[props.locale].tr9td3}</td>
 							      </tr>
 							       <tr>
-							      	<td>Inbody</td>
-							      	<td>35€</td>
+							      	<td>{prices[props.locale].tr10td1}</td>
+							      	<td>{prices[props.locale].tr10td2}</td>
 							      	<td></td>
 							      </tr>
 							    </tbody>
 							</Table>
 							<div className="ticket-container">
+								{/*Missing svenska content */}
 								<div>
 									<h5>{`Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.`}</h5>
 								</div>
@@ -331,6 +333,7 @@ const ContentContainer = (props) => {
 									<div className="ticketImage"><Image responsive src={ticket8Img} /></div>
 									
 								</div>
+							{/* Missing svenska content */}
 								<div>
 									<p>{`Pidätämme oikeudet muutoksiin.`}</p>
 								</div>
@@ -338,44 +341,44 @@ const ContentContainer = (props) => {
 			            </div>
 			            <Col xs={12} md={6}>
 			            	<div>
-			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{`Avoinna`}</h4>
+			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{open[props.locale].h4}</h4>
 			            		<Row className="open-at">
 				            		<Col xs={6}>
-				            			{`Maanantai - torstai`}
+				            			{open[props.locale].row1col1}
 				            		</Col>
 				            		<Col xs={6}>
-				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 21:00`}</span>
-				            		</Col>
-				            	</Row>
-				            	<Row className="open-at">
-				            		<Col xs={6}>
-				            			{`Perjantai`}
-				            		</Col>
-				            		<Col xs={6}>
-				            			<span style={{fontWeight: 'bold'}}>{`07:00 - 20:00`}</span>
+				            			<span style={{fontWeight: 'bold'}}>{open[props.locale].row1col2}</span>
 				            		</Col>
 				            	</Row>
 				            	<Row className="open-at">
 				            		<Col xs={6}>
-				            			{`Lauantai`}
+				            			{open[props.locale].row2col1}
 				            		</Col>
 				            		<Col xs={6}>
-				            			<span style={{fontWeight: 'bold'}}>{`09:00 - 18:00`}</span>
+				            			<span style={{fontWeight: 'bold'}}>{open[props.locale].row2col2}</span>
 				            		</Col>
 				            	</Row>
 				            	<Row className="open-at">
 				            		<Col xs={6}>
-				            			{`Sunnuntai`}
+				            			{open[props.locale].row3col1}
 				            		</Col>
 				            		<Col xs={6}>
-				            			<span style={{fontWeight: 'bold'}}>{`14:00 - 20:00`}</span>
+				            			<span style={{fontWeight: 'bold'}}>{open[props.locale].row3col2}</span>
+				            		</Col>
+				            	</Row>
+				            	<Row className="open-at">
+				            		<Col xs={6}>
+				            			{open[props.locale].row4col1}
+				            		</Col>
+				            		<Col xs={6}>
+				            			<span style={{fontWeight: 'bold'}}>{open[props.locale].row4col2}</span>
 				            		</Col>
 				            	</Row>
 			            	</div>
 			            </Col>
 			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
 			            	<div className="yhteystiedot" style={{textAlign: 'center'}}>
-			            		<h4 style={{textTransform: 'uppercase'}}>{`Yhteystiedot`}</h4>
+			            		<h4 style={{textTransform: 'uppercase'}}>{contact[props.locale].h4}</h4>
 			            		<div className="contact-item flex" style={{marginBottom: '10px'}}>
 			            			<div className="flex-1 flex-center">
 			            				<span className="fa-stack fa-lg">
@@ -384,7 +387,7 @@ const ContentContainer = (props) => {
 										</span>
 			            			</div>
 			            			<div className="flex flex-5">
-			            				<p style={{textAlign: 'start'}}>{`Kauppakeskus Strand 2krs, Rantatie 3, 10210 Inkoo`}</p>
+			            				<p style={{textAlign: 'start'}}>{contact[props.locale].address}</p>
 			            			</div>
 			            		</div>
 			            		<div className="contact-item flex">
@@ -395,7 +398,7 @@ const ContentContainer = (props) => {
 										</span>
 			            			</div>
 			            			<div className="flex flex-5">
-			            				<p  style={{textAlign: 'start'}}>{`(09) 2230 9402`}</p>
+			            				<p  style={{textAlign: 'start'}}>{contact[props.locale].phone}</p>
 			            			</div>
 			            		</div>
 			            		<div className="contact-item flex">
@@ -406,7 +409,7 @@ const ContentContainer = (props) => {
 										</span>
 			            			</div>
 			            			<div className="flex flex-5">
-			            				<p  style={{textAlign: 'start'}}>{` aquarius[at]aquariussporting.fi`}</p>
+			            				<p  style={{textAlign: 'start'}}>{contact[props.locale].email}</p>
 			            			</div>
 			            		</div>
 			            	</div>
