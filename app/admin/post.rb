@@ -12,6 +12,6 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-permit_params :title, :message
+permit_params :title, :message, :author
 
 end

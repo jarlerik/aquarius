@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './navBar/NavBar';
 import ContentContainer from './ContentContainer';
+import {getPosts} from './ApiClient';
 
 
 class App extends Component {
@@ -12,6 +13,18 @@ class App extends Component {
     this.state = {
       locale: 'fi'
     }
+  }
+
+  componentDidMount() {
+    this.getPosts();
+  }
+
+  getPosts = async () => {
+    const resp = await getPosts();
+    if(resp.data) {
+      this.setState({posts: resp.data});
+    }
+
   }
 
   setLocale(locale) {

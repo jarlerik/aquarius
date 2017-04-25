@@ -24,20 +24,20 @@ import contact from './data/contact.js';
 
 utils.bootstrapUtils.addStyle(Button, 'custom');
 
-const posts = [
-  {
-    header: 'Inbody 35 €',
-    body: 'Inbody kehon koostumusanalyysi mittaa mm. lihasmassan, lihastasapainon, proteiini- ja rasvamassan, rasvaprosentin, mineraalit, kehon nesteet sekä BMI.'
-  },
-  {
-    header: 'Iyengar jooga keväällä',
-    body: 'Lauantaina 22.4 klo. 12.30-14.30'
-  },
-  {
-    header: 'Sauna on lämmin sinulle',
-    body: 'Ma-To 9-11.30 & 16-20.30 Pe 9-11.30 & 16-19.30 La 10-17.30 Su 15-19.30'
-  }
-];
+// const posts = [
+//   {
+//     header: 'Inbody 35 €',
+//     body: 'Inbody kehon koostumusanalyysi mittaa mm. lihasmassan, lihastasapainon, proteiini- ja rasvamassan, rasvaprosentin, mineraalit, kehon nesteet sekä BMI.'
+//   },
+//   {
+//     header: 'Iyengar jooga keväällä',
+//     body: 'Lauantaina 22.4 klo. 12.30-14.30'
+//   },
+//   {
+//     header: 'Sauna on lämmin sinulle',
+//     body: 'Ma-To 9-11.30 & 16-20.30 Pe 9-11.30 & 16-19.30 La 10-17.30 Su 15-19.30'
+//   }
+// ];
 
 
 
@@ -45,7 +45,6 @@ const posts = [
 
 const ContentContainer = (props) => {
 	moment.locale(props.locale);
-	const date = moment().format('LL');
 	return (
 		<div className="contentContainer">
 			<Row className="Content-element">
@@ -68,13 +67,13 @@ const ContentContainer = (props) => {
 		          			<Col xs={12} md={8} lg={8}>
 				          		<div className="post-item-list">
 				          			<Row>
-				                        {posts.map((post) => {
+				                        {props.posts && props.posts.map((post) => {
 				                            return (
 				                              	<Col xs={12} md={6} lg={6}>
 					                              	<div className="post-item">
 					                                	<Row>
 						                                  <Col xs={12} className="flex-8">
-						                                    <p  style={{color: '#5ba5b2'}} className="post-header">{post.header}</p>
+						                                    <p  style={{color: '#5ba5b2'}} className="post-header">{post.title}</p>
 						                                  </Col>
 						                                  <Col xs={6} className="flex-2">
 						                                    
@@ -83,15 +82,15 @@ const ContentContainer = (props) => {
 						                                <div className="post-item-content">
 						                                  <Row>
 						                                    <Col xs={12} md={12}>
-						                                      <p style={{color: '#848484'}}>{post.body}</p>
+						                                      <p style={{color: '#848484'}}>{post.message}</p>
 						                                    </Col>
 						                                  </Row>
 						                                  <Row>
 						                                  	<Col xs={6} style={{color: '#ccc'}}>
-						                                  		<p>{`Johanna`}</p>
+						                                  		<p>{post.author}</p>
 						                                  	</Col>
 						                                  	<Col xs={6}  style={{margin: 'auto 0', color: '#ccc'}}>
-						                                  		<p>{date}</p>
+						                                  		<p>{moment(post.updated_at).format('LL')}</p>
 						                                  	</Col>
 						                                  </Row>
 						                                </div>
