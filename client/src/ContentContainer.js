@@ -24,26 +24,27 @@ import contact from './data/contact.js';
 
 utils.bootstrapUtils.addStyle(Button, 'custom');
 
-// const posts = [
-//   {
-//     header: 'Inbody 35 €',
-//     body: 'Inbody kehon koostumusanalyysi mittaa mm. lihasmassan, lihastasapainon, proteiini- ja rasvamassan, rasvaprosentin, mineraalit, kehon nesteet sekä BMI.'
-//   },
-//   {
-//     header: 'Iyengar jooga keväällä',
-//     body: 'Lauantaina 22.4 klo. 12.30-14.30'
-//   },
-//   {
-//     header: 'Sauna on lämmin sinulle',
-//     body: 'Ma-To 9-11.30 & 16-20.30 Pe 9-11.30 & 16-19.30 La 10-17.30 Su 15-19.30'
-//   }
-// ];
-
-
-
-
-
 const ContentContainer = (props) => {
+
+	const getMessage = (post) => {
+		const locale = props.locale;
+		if(locale === 'sv' && post.message_sv) {
+			return post.message_sv;
+		}
+		else {
+			return post.message;
+		}
+	}
+
+	const getTitle = (post) => {
+		const locale = props.locale;
+		if(locale === 'sv' && post.title_sv) {
+			return post.title_sv;
+		}
+		else {
+			return post.title;
+		}
+	}
 	moment.locale(props.locale);
 	return (
 		<div className="contentContainer">
@@ -73,7 +74,7 @@ const ContentContainer = (props) => {
 					                              	<div className="post-item">
 					                                	<Row>
 						                                  <Col xs={12} className="flex-8">
-						                                    <p  style={{color: '#5ba5b2'}} className="post-header">{post.title}</p>
+						                                    <p  style={{color: '#5ba5b2'}} className="post-header">{getTitle(post)}</p>
 						                                  </Col>
 						                                  <Col xs={6} className="flex-2">
 						                                    
@@ -82,7 +83,7 @@ const ContentContainer = (props) => {
 						                                <div className="post-item-content">
 						                                  <Row>
 						                                    <Col xs={12} md={12}>
-						                                      <p style={{color: '#848484'}}>{post.message}</p>
+						                                      <p style={{color: '#848484'}}>{getMessage(post)}</p>
 						                                    </Col>
 						                                  </Row>
 						                                  <Row>

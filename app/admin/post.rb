@@ -12,6 +12,16 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-permit_params :title, :message, :author
+	permit_params :title, :message, :author, :title_sv, :message_sv
 
+	form do |f|
+		inputs "New post" do
+			f.input :title, :label => "Title Suomi"
+			f.input :title_sv, :label => "Title Svenska"
+			f.input :message, :label => "Message body Suomi"
+			f.input :message_sv, :label => "Message body Svenska"
+			f.input :author, :label => "Written by"
+		end
+		f.actions
+	end
 end
