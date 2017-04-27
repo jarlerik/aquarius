@@ -54,7 +54,7 @@
     background-color: white;
     min-height: 120px;
     padding: 10px 5px 5px 5px;
-    box-shadow: 5px 5px 5px #eee;
+    //box-shadow: 5px 5px 5px #eee;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -151,7 +151,7 @@
 
 .ajankohtaista-element {
 	padding: 20px;
-    background-color: #fafafa;
+    background-color: #ffea78;
 }
 
 #personal-trainer-content {
