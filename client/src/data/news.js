@@ -1,6 +1,6 @@
 export default {
 	fi: {
-		header: "Tie hyvään mieleen ja kuntoon",
+		header: "Aquarius Sporting Club",
 
 		p1: `Meillä voit kuntoilla valoisissa tiloissa, joista avautuu upea
 			merinäköala. Käytettävissäsi ovat Technogymin huippumodernit
@@ -10,11 +10,11 @@ export default {
 			sekä meidän muita jumppia.`,
 
 		p2: `Kuntoilun jälkeen voit rentoutua viihtyisässä saunassa.
-			Hyvä treeni virkistää sekä mielesi, että kehosi ja olet täynnä
+			Hyvä treeni virkistää sekä mielesi että kehosi ja olet täynnä
 			energiaa!`
 	},
 	sv: {
-		header: `Vägen till god hälsa går via Aquarius!`,
+		header: `Aquarius Sporting Club`,
 
 		p1: `Hos oss kan du träna i ljusa och rymliga utrymmen med en
 			fantastisk havsutsikt! Vi har toppmodern utrustning från

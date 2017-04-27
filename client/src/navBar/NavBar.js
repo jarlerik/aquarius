@@ -89,8 +89,8 @@ render() {
 			sv: 'Företagservice'
 		},
 		contactAndPrices: {
-			fi: 'Yhteystiedot ja hinnasto',
-			sv: 'Kontaktuppgifter och priser'
+			fi: 'Hinnasto ja yhteystiedot',
+			sv: 'Priser och kontaktuppgifter'
 		},
 		open: {
 			fi: 'Aikataulut',
@@ -123,9 +123,6 @@ render() {
 					</div>
 				</div>
 				<div className="flex">
-					<div className="flex-1">
-						<Image height={100} src={logo} />
-					</div>
 					<div className="flex flex-3 navlinks medium-visible">
 				    	<div style={{cursor: 'pointer'}}>
 					    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}>

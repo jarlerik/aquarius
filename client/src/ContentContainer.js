@@ -11,6 +11,8 @@ import ticket5Img from './images/ticket5.png';
 import ticket6Img from './images/ticket6.png';
 import ticket7Img from './images/ticket7.png';
 import ticket8Img from './images/ticket8.png';
+import logo from './images/logo.png';
+
 import moment from 'moment';
 
 //content
@@ -53,7 +55,7 @@ const ContentContainer = (props) => {
 					<div id="ajankohtaista-element-begin">
 						<div id="ajankohtaista-element-wrapper">
 							<div style={{paddingTop: '5%'}}>
-								<div><h2>{news[props.locale].header}</h2></div>
+								<div><h1 className="Image-container-element-header">{news[props.locale].header}</h1></div>
 								<Row style={{marginBottom: '50px'}}>
 									<Col xs={12} md={12}>
 								    	<div><p className="ingress">{news[props.locale].p1}</p></div>
@@ -230,7 +232,7 @@ const ContentContainer = (props) => {
 		    		<div>
 			            <div>
 			            	<div style={{textAlign: 'center'}}>
-			            		<h4 style={{textTransform: 'uppercase'}}>{prices[props.locale].h4}</h4>
+			            		<h2 style={{textTransform: 'uppercase'}}>{prices[props.locale].h4}</h2>
 			            	</div>
 			            	<Table striped bordered condensed hover>
 							    <thead>
@@ -307,7 +309,7 @@ const ContentContainer = (props) => {
 							<div className="ticket-container">
 								{/*Missing svenska content */}
 								<div>
-									<h5>{`Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.`}</h5>
+									<h5>{prices[props.locale].h5}</h5>
 								</div>
 								<div>
 									<div className="ticketImage"><Image responsive src={ticket1Img} /></div>
@@ -335,7 +337,7 @@ const ContentContainer = (props) => {
 								</div>
 							{/* Missing svenska content */}
 								<div>
-									<p>{`Pidätämme oikeudet muutoksiin.`}</p>
+									<p>{prices[props.locale].p}</p>
 								</div>
 							</div>
 			            </div>
@@ -375,6 +377,9 @@ const ContentContainer = (props) => {
 				            		</Col>
 				            	</Row>
 			            	</div>
+			            	<div style={{textAlign: 'center'}}>
+								<Image height={200} src={logo} />
+							</div>
 			            </Col>
 			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
 			            	<div className="yhteystiedot" style={{textAlign: 'center'}}>

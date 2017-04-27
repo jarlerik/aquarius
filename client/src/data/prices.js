@@ -1,6 +1,8 @@
 export default {
 	fi: {
+		h5: 'Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.',
 		h4: 'Hinnasto',
+		p: 'Pidätämme oikeudet muutoksiin.',
 		tableHeader: 'Vuosijäsenyys',
 		tr1td1: 'VIP - kuntosali ja liikuntaryhmät. Sisältää kaksi henkilökohtaista harjoitusohjelmaa vuodessa.',
 		tr1td2: '65€/kk',
@@ -27,7 +29,9 @@ export default {
 		tr10td2: '35€'
 	},
 	sv: {
+		h5: 'Som betalningsmedel tar vi emot: Ticket Duo, Ticket Virike, Virikesedlar, Smartum, ePassi och Tyky Motionssedlar.',
 		h4: 'Priser',
+		p: 'Vi förbehåller oss rätten till ändringar.',
 		tableHeader: 'Årsmedlemskap',
 		tr1td1: 'VIP – konditionssal och motionsgrupper. Inkluderar två personligaträningsprogram per år.',
 		tr1td2: '65€/mån',

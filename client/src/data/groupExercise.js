@@ -54,14 +54,13 @@ export default {
 				fi: {
 						name: 'Body Challenge',
 
-						description: `Treeni kiehittää lihas- ja räjähtävää voimaa sekä aerobista kuntoa. 
+						description: `Treeni kiehittää lihasmassaa, räjähtävää voimaa ja aerobista kuntoa. 
 							Kovaa treeniä korkealla energiankulutuksella!`
 				},
 				sv: {
 						name: 'Body Challenge',
 
-						description: `Treeni kiehittää lihas- ja räjähtävää voimaa sekä aerobista kuntoa. 
-							Kovaa treeniä korkealla energiankulutuksella! Samma på svenska.`
+						description: `Tränining utvecklar muskelmassa, explosiv styrka och aerobisk kondition. Hård träning med hög energiförbrukning!`
 				}
 			},
 			{
