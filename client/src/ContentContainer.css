@@ -1,6 +1,6 @@
 .contentContainer {
 	margin: 10px 0px 0px 0px;
-    padding: 100px 20px 0px 20px;
+    padding: 0 20px 0px 20px;
 }
 /*
 .contentContainer h2 {
@@ -54,7 +54,7 @@
     background-color: white;
     min-height: 120px;
     padding: 10px 5px 5px 5px;
-    //box-shadow: 5px 5px 5px #eee;
+    box-shadow: 5px 5px 5px #eee;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -151,7 +151,7 @@
 
 .ajankohtaista-element {
 	padding: 20px;
-    background-color: #ffea78;
+    background-color: #fafafa;
 }
 
 #personal-trainer-content {
