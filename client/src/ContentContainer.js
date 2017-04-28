@@ -343,7 +343,6 @@ const ContentContainer = (props) => {
 			            </div>
 			            <Col xs={12} md={6}>
 			            	<div>
-			            		<h4 style={{textTransform: 'uppercase', textAlign: 'center'}}>{open[props.locale].h4}</h4>
 			            		<Row className="open-at">
 				            		<Col xs={6}>
 				            			{open[props.locale].row1col1}
@@ -383,7 +382,6 @@ const ContentContainer = (props) => {
 			            </Col>
 			            <Col style={{borderLeft: '3px solid #666666'}} xs={12} md={6}>
 			            	<div className="yhteystiedot" style={{textAlign: 'center'}}>
-			            		<h4 style={{textTransform: 'uppercase'}}>{contact[props.locale].h4}</h4>
 			            		<div className="contact-item flex" style={{marginBottom: '10px'}}>
 			            			<div className="flex-1 flex-center">
 			            				<span className="fa-stack fa-lg">

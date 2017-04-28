@@ -78,7 +78,7 @@ render() {
 		},
 		groupExercise: {
 			fi: 'Ryhmäliikunta',
-			sv: 'Groupmotion'
+			sv: 'Gruppmotion'
 		},
 		personalTrainer: {
 			fi: 'Personal trainer',
@@ -86,7 +86,7 @@ render() {
 		},
 		enterpriseServices: {
 			fi: 'Yrityspalvelut',
-			sv: 'Företagservice'
+			sv: 'Företagsservice'
 		},
 		contactAndPrices: {
 			fi: 'Hinnasto ja yhteystiedot',
@@ -94,7 +94,7 @@ render() {
 		},
 		open: {
 			fi: 'Aikataulut',
-			sv: 'Tidtabell'
+			sv: 'Tidtabeller'
 		}
 
 	}

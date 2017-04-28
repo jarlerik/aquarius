@@ -218,11 +218,11 @@ export default {
 			{
 				fi: {	
 						name: 'Kinesis 65 +',
-						description: `Helppoa ja hauskaa liikuntaa. 60 + kiertoharjoittelutunti.`
+						description: `Helppoa ja hauskaa liikuntaa. 65 + kiertoharjoittelutunti.`
 					},
 				sv: {
 						name: 'Kinesis 65 +',
-						description: `Lätt och rolig cirkelträning. 60 + egen cirkelträningstimme.`		
+						description: `Lätt och rolig cirkelträning. 65 + egen cirkelträningstimme.`		
 				}
 			},
 			,
