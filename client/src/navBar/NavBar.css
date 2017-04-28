@@ -8,9 +8,13 @@
     box-shadow: 0px 3px 9px #dfdcdc;
 }
 
+.facebook-link {
+	color: #333;
+}
+
 .NavBar-toggle {
 	margin: 10px;
-	color: #79a1ab;
+	color: #333;
 }
 
 @media (max-width: 900px) {
@@ -30,18 +34,20 @@
 }
 
 .navlinks > div {
-	margin: auto 15px;
+	margin: auto 10px;
 	text-transform: uppercase;
 
 	font-family: 'Montserrat', sans-serif!important;
 }
 
 .navlinks > div > a.active {
-	color: #5ba5b2;
+
 }
 
 .navlinks > div > a {
 	color: #333;
+	font-weight: 700;
+    font-size: 16px;
 }
 
 a:hover {

@@ -125,27 +125,27 @@ render() {
 				<div className="flex">
 					<div className="flex flex-3 navlinks medium-visible">
 				    	<div style={{cursor: 'pointer'}}>
-					    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}>
+					    	<Link activeClass="active" to="ajankohtaista" spy={true}  offset={-200} smooth={true} duration={1000}  offset={-100}>
 					          {navigation.updates[this.props.locale]}
 					        </Link>
 					    </div>
 					    <div style={{cursor: 'pointer'}}>
-					    	<Link activeClass="active" to="ryhmaliikunta" spy={true} offset={-200} smooth={true} duration={1000}>
+					    	<Link activeClass="active" to="ryhmaliikunta" spy={true} offset={-200} smooth={true} duration={1000}  offset={-100}>
 					          {navigation.groupExercise[this.props.locale]}
 					        </Link>
 					    </div>
 					    <div style={{cursor: 'pointer'}}>
-					    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} offset={-200} smooth={true} duration={1000}>
+					    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000} offset={-100}>
 					          {navigation.personalTrainer[this.props.locale]}
 					        </Link>
 					    </div>
 					    <div style={{cursor: 'pointer'}}>
-					    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} offset={-200} smooth={true} duration={1000}>
+					    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000} offset={-100}>
 					          {navigation.enterpriseServices[this.props.locale]}
 					        </Link>
 					    </div>
 					    <div style={{cursor: 'pointer'}}>
-					    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} offset={-200} smooth={true} duration={1000}>
+					    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000} offset={-100}>
 					          {navigation.contactAndPrices[this.props.locale]}
 					        </Link>
 					    </div>
@@ -162,7 +162,7 @@ render() {
 					    </div>
 				    </div>
 				    <div style={{margin: 'auto', padding: '10px'}}>
-						  <a target="_blank" style={{color: '#5ba5b2'}} href="https://www.facebook.com/aquariussporting"><i className="fa fa-facebook fa-3x"></i></a>
+						  <a target="_blank" className="facebook-link" href="https://www.facebook.com/aquariussporting"><i className="fa fa-facebook fa-3x"></i></a>
 				    </div>
 				</div>
 			    <div className="small-visible">
@@ -172,27 +172,27 @@ render() {
 					          	<div>
 					          		<div className="navlinks">
 								    	<div style={{cursor: 'pointer'}}>
-									    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} duration={1000}>
+									    	<Link activeClass="active" className="ajankohtaista" to="ajankohtaista" spy={true} smooth={true} duration={1000} offset={-140}>
 									          {navigation.updates[this.props.locale]}
 									        </Link>
 									    </div>
 									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "ryhmaliikunta" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} duration={1000}>
+									    	<Link activeClass="active" className="ryhmaliikunta" to="ryhmaliikunta" spy={true} smooth={true} duration={1000} offset={-140}>
 									          {navigation.groupExercise[this.props.locale]}
 									        </Link>
 									    </div>
 									     <div style={{cursor: 'pointer'}} className={this.state.activeSection === "personal_training" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000}>
+									    	<Link activeClass="active" className="personal_training" to="personal_training" spy={true} smooth={true} duration={1000} offset={-140}>
 									          {navigation.personalTrainer[this.props.locale]}
 									        </Link>
 									    </div>
 									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yrityspalvelut" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000}>
+									    	<Link activeClass="active" className="yrityspalvelut" to="yrityspalvelut" spy={true} smooth={true} duration={1000} offset={-140}>
 									          {navigation.enterpriseServices[this.props.locale]}
 									        </Link>
 									    </div>
 									    <div style={{cursor: 'pointer'}} className={this.state.activeSection === "yhteystiedot-hinnasto" ? "active-section" : "unactive-section"}>
-									    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000}>
+									    	<Link activeClass="active" className="yhteystiedot-hinnasto" to="yhteystiedot-hinnasto" spy={true} smooth={true} duration={1000} offset={-140}>
 									          {navigation.contactAndPrices[this.props.locale]}
 									        </Link>
 									    </div>

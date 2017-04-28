@@ -54,7 +54,7 @@ const ContentContainer = (props) => {
 				<Element name="ajankohtaista">
 					<div id="ajankohtaista-element-begin">
 						<div id="ajankohtaista-element-wrapper">
-							<div style={{paddingTop: '5%'}}>
+							<div className="first-image-container">
 								<div><h1 className="Image-container-element-header">{news[props.locale].header}</h1></div>
 								<Row style={{marginBottom: '50px'}}>
 									<Col xs={12} md={12}>

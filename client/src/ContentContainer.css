@@ -2,21 +2,19 @@
 	margin: 10px 0px 0px 0px;
     padding: 0 20px 0px 20px;
 }
-/*
-.contentContainer h2 {
-	color: #32c5d2;
-}*/
 
 .content-header {
     text-transform: uppercase;
     background:	#32c5d2;
 }
 
-.element {
-	/*margin-bottom: 100px;
-	padding: 10px;
-	margin: 10px;*/
-}
+
+
+
+ .first-image-container {
+        padding-top: 120px;
+    }
+
 
 .aqua-border-left {
 	border-left: 3px solid #5ba5b2;
