@@ -159,12 +159,17 @@
 
 .personal-trainer-service {
     background: white;
-    min-height: 300px;
+    min-height: 350px;
     border-left: 5px solid #5ba5b2;
     padding: 20px;
     box-shadow: 0px 0px 10px 5px #dedcdc;
     font-family: 'montserrat', sans-serif;
     color: #848484;
+
+}
+
+.personal-trainer-service > ul {
+    padding: 15px 0 10px 15px;
 }
 
 .personal-trainer-service > h2 {

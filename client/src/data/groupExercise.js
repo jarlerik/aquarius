@@ -11,7 +11,7 @@ export default {
 				Nettivarauksia varten tarvitset tunnuksen ja salasanan,
 				jotka saat Aquariuksen vastaanotosta.`,
 
-		button: `Varaa tunti`
+		button: `Varaa`
 	},
 	sv: {
 		header: `Gruppmotion`,
@@ -22,7 +22,7 @@ export default {
 		Kombinera gärna olika timmar och motionsformer. Ni kan reservera plats på förhand till motionsgrupperna.
 		För bokningar behöver du en kod som du får från Aquarius reception`,
 
-		button: `Inboka timme`
+		button: `Boka`
 
 	},
 

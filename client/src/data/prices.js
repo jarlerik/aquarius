@@ -26,7 +26,9 @@ export default {
 		tr9td2: '100€',
 		tr9td3: '80€',
 		tr10td1: 'Inbody',
-		tr10td2: '35€'
+		tr10td2: '35€',
+		tr11td1: 'Inbody',
+		tr11td2: '20€'
 	},
 	sv: {
 		h5: 'Som betalningsmedel tar vi emot: Ticket Duo, Ticket Virike, Virikesedlar, Smartum, ePassi och Tyky Motionssedlar.',
@@ -55,6 +57,8 @@ export default {
 		tr9td2: '100€',
 		tr9td3: '80€',
 		tr10td1: 'Inbody',
-		tr10td2: '35€'
+		tr10td2: '35€',
+		tr11td1: 'Inbody',
+		tr11td2: '20€'
 	}
 }

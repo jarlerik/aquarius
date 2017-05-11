@@ -268,6 +268,16 @@ const ContentContainer = (props) => {
 							      	<td>
 							      	</td>
 							      </tr>
+							      <tr>
+							      	<td>
+							      		{prices[props.locale].tr11td1}
+							      	</td>
+							      	<td>
+							      		{prices[props.locale].tr11td2}
+							      	</td>
+							      	<td>
+							      	</td>
+							      </tr>
 							      <tr></tr>
 							      <tr className="table-split" style={{textAlign: 'center'}}>
 							      	<td className="first-row">

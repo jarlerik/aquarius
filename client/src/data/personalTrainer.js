@@ -25,11 +25,11 @@ export default {
 			price3: `5 x 270 € - vuosijäsen 250 €`
 		},
 		sv: {
-			content: `En personlig tränare lyssnar på dina mål och önskemål
+			content: `Personal trainer lyssnar på dina mål och önskemål
 				och formar träningen enligt dina behov. Vi träffas en
 				eller flera gånger enligt dina behov så du när dina mål
 				och utvecklas oberoende av utgångspunkten. Vi kan
-				koncentrera os t.ex. på att hitta den rätta tekniken, hur
+				koncentrera oss t.ex. på att hitta den rätta tekniken, hur
 				man finner motivation, träning som stöder din gren,
 				kostråd eller nya träningsformer.`,
 
