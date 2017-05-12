@@ -17,7 +17,7 @@ export default {
 			},
 
 			{
-				text: `Teidän on mahdollisuus käyttää myös InBody mittauslaitetta kehon
+				text: `Teillä on mahdollisuus käyttää myös InBody mittauslaitetta kehon
 					koostumuksen selvittämiseen. InBodylla mitataan vaivattomasti mm.
 					solun sisäiset- ja ulkoiset nesteet, proteiinimassa, mineraalit, rasvamassa,
 					painoindeksi sekä kehon lihastasapaino.`
