@@ -56,16 +56,19 @@ const ContentContainer = (props) => {
 						<div id="ajankohtaista-element-wrapper">
 							<div className="first-image-container">
 								<div><h1 className="Image-container-element-header">{news[props.locale].header}</h1></div>
-								<Row style={{marginBottom: '50px'}}>
-									<Col xs={12} md={12}>
-								    	<div><p className="ingress">{news[props.locale].p1}</p></div>
-								    	<div><p className="ingress">{news[props.locale].p2}</p></div>
-								    </Col>
-								</Row>
 							</div>
 						</div>
 					</div>
 					<div className="ajankohtaista-element">
+						<div className="presentation-element">
+							<Row style={{marginBottom: '50px'}}>
+									<Col xs={12} md={12}>
+								    	<div><p>{news[props.locale].p1}</p></div>
+								    	<div><p>{news[props.locale].p2}</p></div>
+								    </Col>
+							</Row>
+						</div>
+						<hr/>
 		          		<Row>
 		          			<Col xs={12} md={8} lg={8}>
 				          		<div className="post-item-list">
