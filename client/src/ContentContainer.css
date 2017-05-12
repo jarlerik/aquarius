@@ -94,6 +94,12 @@
     min-height: 300px;
 }
 
+@media (min-width: 600px) {
+    .Image-container-element-header {
+        font-size: 56px;
+    }
+}
+
 .Image-container-element-header {
     color: white;
 }
