@@ -6,10 +6,7 @@ export default {
 				Tunnit sopivat kaikille: miehille ja naisille aloittelijoista
 				edistyneisiin.
 				Tunnit kestävät 30-70 minuuttia. Liiku monipuolisesti
-				yhdistellen erilaisia tunteja.
-				Voit varata paikan etukäteen tunneille.
-				Nettivarauksia varten tarvitset tunnuksen ja salasanan,
-				jotka saat Aquariuksen vastaanotosta.`,
+				yhdistellen erilaisia tunteja.`,
 
 		button: `Varaa`
 	},
@@ -19,8 +16,7 @@ export default {
 		text: `Gruppmotion är skojigt och rörelserna är lätta.
 		Vi har passande timmar för alla: män och kvinnor,
 		nybörjare och mera erfarna. Timmarna räcker 30-70 minuter.
-		Kombinera gärna olika timmar och motionsformer. Ni kan reservera plats på förhand till motionsgrupperna.
-		För bokningar behöver du en kod som du får från Aquarius reception`,
+		Kombinera gärna olika timmar och motionsformer.`,
 
 		button: `Boka`
 

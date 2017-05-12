@@ -4,10 +4,7 @@ export default {
 	pt: {
 		fi: {
 			content: `Personal Trainer kuuntelee sinun tavoitteita sekä
-				toiveita ja muokkaa treenejä tarpeittesi mukaan.
-				Tapaamme tarpeesi mukaan yhdestä useampaan
-				kertaan, jotta lähtötasostasi riippumatta kehityt ja
-				saavutat tavoitteesi. Voimme keskittyä esim. oikeaan
+				toiveita ja muokkaa treenejä tarpeittesi mukaan. Voimme keskittyä esim. oikeaan
 				tekniikkaan, motivaation löytämiseen, lajia tukevaan
 				harjoitteluun, ravitsemukseen tai uusiin
 				treenimuotoihin.`,
@@ -26,9 +23,7 @@ export default {
 		},
 		sv: {
 			content: `Personal trainer lyssnar på dina mål och önskemål
-				och formar träningen enligt dina behov. Vi träffas en
-				eller flera gånger enligt dina behov så du när dina mål
-				och utvecklas oberoende av utgångspunkten. Vi kan
+				och formar träningen enligt dina behov. Vi kan
 				koncentrera oss t.ex. på att hitta den rätta tekniken, hur
 				man finner motivation, träning som stöder din gren,
 				kostråd eller nya träningsformer.`,
