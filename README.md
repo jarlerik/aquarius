@@ -1,28 +1,32 @@
 
-# README
+# Rails + React web application for Aquarius sporting club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# System requirements
 
-Things you may want to cover:
+* Ruby 2+
 
-* Ruby version
+* Rails 5+
 
-* System dependencies
+* Bundler
 
-* Configuration
+* PostgreSQL
 
-* Database creation
+* Node (+npm)
 
-* Database initialization
+# Up and running
 
-* How to run the test suite
+* bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+* Creating an optimized production build
 
-* Deployment instructions
+  1 cd client
 
-* ...
-=======
-# aquarius
-Aquarius sporting club web site
+  2 npm run build
+
+  3 cd ..
+
+  4 cp -a client/build/. public/
+
+* Starting development server
+
+  - rake start
