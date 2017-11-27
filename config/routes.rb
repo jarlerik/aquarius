@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   scope 'api' do
   	resources :posts
+    resources :exercises
   end
 end
