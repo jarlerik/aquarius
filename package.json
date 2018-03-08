@@ -3,6 +3,12 @@
   "engines": {
     "node": "6.3.1"
   },
+  "dependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
   "scripts": {
     "build": "cd client && npm run build && cd .. && cp -a client/build/. public/",
     "deploy": "cp -a client/build/. public/",
