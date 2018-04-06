@@ -1,10 +1,11 @@
 {
-  "name": "client",
+  "name": "rails-api",
   "engines": {
     "node": "6.3.1"
   },
   "scripts": {
-    "build": "cd client && npm run build && cd .. && cp -a client/build/. public/",
+    "build":
+      "cd client && npm run build && cd .. && cp -a client/build/. public/",
     "deploy": "cp -a client/build/. public/",
     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   }
