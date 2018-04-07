@@ -7,3 +7,7 @@ export function getPosts() {
 export function getExercises() {
   return axios.get("/api/exercises");
 }
+
+export function getOpenTimes() {
+  return axios.get("/api/opens");
+}

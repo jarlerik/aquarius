@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./navBar/NavBar";
 import ContentContainer from "./ContentContainer";
-import { getPosts, getExercises } from "./ApiClient";
+import { getPosts, getExercises, getOpenTimes } from "./ApiClient";
 
 class App extends Component {
+  static displayName = "App";
   constructor(props) {
     super(props);
 
@@ -16,7 +17,14 @@ class App extends Component {
   componentDidMount() {
     this.getPosts();
     this.getExercises();
+    this.getOpenTimes();
   }
+  getOpenTimes = async () => {
+    const resp = await getOpenTimes();
+    if (resp.data) {
+      this.setState({ openTimes: resp.data });
+    }
+  };
 
   getExercises = async () => {
     const resp = await getExercises();

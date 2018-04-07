@@ -21,7 +21,7 @@ import groupExercise from "./data/groupExercise.js";
 import personalTrainer from "./data/personalTrainer.js";
 import enterpriseService from "./data/enterpriseService.js";
 import prices from "./data/prices.js";
-import open from "./data/open.js";
+//import open from "./data/open.js";
 import contact from "./data/contact.js";
 
 utils.bootstrapUtils.addStyle(Button, "custom");
@@ -32,7 +32,6 @@ const ContentContainer = props => {
     switch (locale) {
       case "sv":
         return exercise.title_sv;
-        break;
       default:
         return exercise.title;
     }
@@ -43,7 +42,6 @@ const ContentContainer = props => {
     switch (locale) {
       case "sv":
         return exercise.description_sv;
-        break;
       default:
         return exercise.description;
     }
@@ -66,6 +64,14 @@ const ContentContainer = props => {
       return post.title;
     }
   };
+  const getWeekday = openTime => {
+    const { locale } = props;
+    if (locale === "sv") {
+      return openTime.weekday_sv || "Not available";
+    } else {
+      return openTime.weekday || "Not available";
+    }
+  };
   moment.locale(props.locale);
   return (
     <div className="contentContainer">
@@ -86,8 +92,12 @@ const ContentContainer = props => {
             <div className="presentation-element">
               <Row style={{ marginBottom: "50px" }}>
                 <Col xs={12} md={12}>
-                  <div><p>{news[props.locale].p1}</p></div>
-                  <div><p>{news[props.locale].p2}</p></div>
+                  <div>
+                    <p>{news[props.locale].p1}</p>
+                  </div>
+                  <div>
+                    <p>{news[props.locale].p2}</p>
+                  </div>
                 </Col>
               </Row>
             </div>
@@ -153,7 +163,6 @@ const ContentContainer = props => {
                   fb-xfbml-state="rendered"
                   fb-iframe-plugin-query="app_id=&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306"
                 >
-
                   <iframe
                     name="f3d9bbdd3d41fe8"
                     frameborder="0"
@@ -199,7 +208,9 @@ const ContentContainer = props => {
       <Row className="Content-element">
         <div className="element harjoitukset-content">
           <Row>
-            <div><h3>{groupExercise.exercises.header[props.locale]}</h3></div>
+            <div>
+              <h3>{groupExercise.exercises.header[props.locale]}</h3>
+            </div>
             <div>
               {props.exercises &&
                 props.exercises.map(exercise => {
@@ -243,7 +254,6 @@ const ContentContainer = props => {
                   <li>{personalTrainer.pt[props.locale].li1}</li>
                   <li>{personalTrainer.pt[props.locale].li2}</li>
                   <li>{personalTrainer.pt[props.locale].li3}</li>
-
                 </ul>
                 <p>{personalTrainer.pt[props.locale].price1}</p>
                 <p>{personalTrainer.pt[props.locale].price2}</p>
@@ -279,7 +289,6 @@ const ContentContainer = props => {
               </p>
             </div>
           </div>
-
         </Element>
         <div id="yrityspalvelut-content">
           <Row>
@@ -344,21 +353,13 @@ const ContentContainer = props => {
                     <td />
                   </tr>
                   <tr>
-                    <td>
-                      {prices[props.locale].tr4td1}
-                    </td>
-                    <td>
-                      {prices[props.locale].tr4td2}
-                    </td>
+                    <td>{prices[props.locale].tr4td1}</td>
+                    <td>{prices[props.locale].tr4td2}</td>
                     <td />
                   </tr>
                   <tr>
-                    <td>
-                      {prices[props.locale].tr11td1}
-                    </td>
-                    <td>
-                      {prices[props.locale].tr11td2}
-                    </td>
+                    <td>{prices[props.locale].tr11td1}</td>
+                    <td>{prices[props.locale].tr11td2}</td>
                     <td />
                   </tr>
                   <tr />
@@ -369,9 +370,7 @@ const ContentContainer = props => {
                       </span>
                     </td>
                     <td className="first-row" />
-                    <td className="first-row">
-                      {prices[props.locale].tr5td2}
-                    </td>
+                    <td className="first-row">{prices[props.locale].tr5td2}</td>
                   </tr>
                   <tr>
                     <td>{prices[props.locale].tr6td1}</td>
@@ -437,7 +436,6 @@ const ContentContainer = props => {
                   <div className="ticketImage">
                     <Image responsive src={ticket8Img} />
                   </div>
-
                 </div>
                 {/* Missing svenska content */}
                 <div>
@@ -447,46 +445,19 @@ const ContentContainer = props => {
             </div>
             <Col xs={12} md={6}>
               <div>
-                <Row className="open-at">
-                  <Col xs={6}>
-                    {open[props.locale].row1col1}
-                  </Col>
-                  <Col xs={6}>
-                    <span style={{ fontWeight: "bold" }}>
-                      {open[props.locale].row1col2}
-                    </span>
-                  </Col>
-                </Row>
-                <Row className="open-at">
-                  <Col xs={6}>
-                    {open[props.locale].row2col1}
-                  </Col>
-                  <Col xs={6}>
-                    <span style={{ fontWeight: "bold" }}>
-                      {open[props.locale].row2col2}
-                    </span>
-                  </Col>
-                </Row>
-                <Row className="open-at">
-                  <Col xs={6}>
-                    {open[props.locale].row3col1}
-                  </Col>
-                  <Col xs={6}>
-                    <span style={{ fontWeight: "bold" }}>
-                      {open[props.locale].row3col2}
-                    </span>
-                  </Col>
-                </Row>
-                <Row className="open-at">
-                  <Col xs={6}>
-                    {open[props.locale].row4col1}
-                  </Col>
-                  <Col xs={6}>
-                    <span style={{ fontWeight: "bold" }}>
-                      {open[props.locale].row4col2}
-                    </span>
-                  </Col>
-                </Row>
+                {props.openTimes &&
+                  props.openTimes.map(openTime => {
+                    return (
+                      <Row className="open-at">
+                        <Col xs={6}>{getWeekday(openTime)}</Col>
+                        <Col xs={6}>
+                          <span style={{ fontWeight: "bold" }}>
+                            {openTime.opentime}
+                          </span>
+                        </Col>
+                      </Row>
+                    );
+                  })}
               </div>
               <div style={{ textAlign: "center" }}>
                 <Image height={200} src={logo} />
