@@ -4,6 +4,21 @@ ActiveAdmin.register_page 'Dashboard' do
   content title: proc { I18n.t('active_admin.dashboard') } do
     div do
       columns do
+        column do
+          panel 'Openings' do
+            ul class: 'open-list' do
+              Open.all.map do |open|
+                li class: 'open-list-item' do
+                  link_to("#{open.weekday} #{open.opentime}", admin_open_path(open))
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    div do
+      columns do
         column max_width: '45%', min_width: '45%' do
           panel 'News' do
             ul class: 'post-list' do
