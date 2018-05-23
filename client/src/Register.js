@@ -63,7 +63,7 @@ export default class Register extends React.Component {
             </ButtonGroup>
           </Row>
         </div>
-        <div className="document">
+        <div className="registerDocument">
           <Document file={registerFile} onLoadSuccess={this.onDocumentLoad}>
             <Page scale={1.5} pageNumber={pageNumber} />
           </Document>
