@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ContentContainer.css";
 import { Element } from "react-scroll";
 import { Col, Image, Row, Button, Table } from "react-bootstrap";
@@ -504,6 +505,19 @@ const ContentContainer = props => {
                   <div className="flex flex-5">
                     <p style={{ textAlign: "start" }}>
                       {contact[props.locale].email}
+                    </p>
+                  </div>
+                </div>
+                <div className="contact-item flex">
+                  <div className="flex-1 flex-center">
+                    <span className="fa-stack fa-lg">
+                      <i className="fa fa-circle fa-stack-2x" />
+                      <i className="fa fa-address-card fa-stack-1x fa-inverse" />
+                    </span>
+                  </div>
+                  <div className="flex flex-5">
+                    <p style={{ textAlign: "start" }}>
+                      <Link to="/rekisteriseloste">{`rekisteriseloste`}</Link>
                     </p>
                   </div>
                 </div>

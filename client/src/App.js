@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import NavBar from "./navBar/NavBar";
 import ContentContainer from "./ContentContainer";
+import Register from "./Register";
 import { getPosts, getExercises, getOpenTimes } from "./ApiClient";
 
 class App extends Component {
@@ -47,8 +49,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar {...this.state} setLocale={this.setLocale.bind(this)} />
-        <ContentContainer {...this.state} />
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return (
+              <div>
+                <NavBar {...this.state} setLocale={this.setLocale.bind(this)} />
+                <ContentContainer {...this.state} />;
+              </div>
+            );
+          }}
+        />
+        <Route
+          path="/rekisteriseloste"
+          render={() => {
+            return <Register />;
+          }}
+        />
       </div>
     );
   }

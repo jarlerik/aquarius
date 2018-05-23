@@ -204,16 +204,18 @@ export default class NavBar extends React.Component {
             </div>
             <div className="flex-1 flex-end small-visible">
               <div id="toggler">
-                {this.state.naviOpen &&
+                {this.state.naviOpen && (
                   <i
                     className="fa fa-times fa-3x NavBar-toggle"
                     onClick={() => this.setState({ naviOpen: false })}
-                  />}
-                {!this.state.naviOpen &&
+                  />
+                )}
+                {!this.state.naviOpen && (
                   <i
                     className="fa fa-bars fa-3x NavBar-toggle"
                     onClick={() => this.setState({ naviOpen: true })}
-                  />}
+                  />
+                )}
               </div>
             </div>
             <div style={{ margin: "auto", padding: "10px" }}>
@@ -227,7 +229,7 @@ export default class NavBar extends React.Component {
             </div>
           </div>
           <div className="small-visible">
-            <div class="flex">
+            <div className="flex">
               <div>
                 <Collapse in={this.state.naviOpen}>
                   <div>
