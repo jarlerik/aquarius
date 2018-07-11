@@ -197,7 +197,10 @@ const ContentContainer = props => {
             </h1>
             <div className="Image-container-element-content">
               <p className="ingress">{groupExercise[props.locale].text}</p>
-              <a target="_blank" href="http://aquarius.bypolar.fi">
+              <a
+                target="_blank"
+                href="https://aquarius.clubmanagement.fi/web/1/webPage.html"
+              >
                 <Button bsSize="large" bsStyle="custom">
                   {groupExercise[props.locale].button}
                 </Button>
