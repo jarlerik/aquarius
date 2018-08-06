@@ -329,7 +329,7 @@ export default class NavBar extends React.Component {
                       </div>
                       <div style={{ cursor: "pointer" }}>
                         <a
-                          href="https://aquarius.bypolar.fi/web/1/webPage.html"
+                          href="https://aquarius.clubmanagement.fi/web/1/webPage.html"
                           target="new"
                         >
                           {navigation.open[this.props.locale]}
