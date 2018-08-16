@@ -10,7 +10,7 @@ export default {
         h2_4: "Fysiotraining",
         p_1: "1 x 60min 65€",
         p_2: "3 x 60min 180€",
-        p_3: "Henkilökohtainen harjoitusohjelma 65€ Fysiotraining paketin ostajille Inbody Aquariuksessa 30"
+        p_3: "Henkilökohtainen harjoitusohjelma 65€ Fysiotraining paketin ostajille Inbody Aquariuksessa 30€."
     },
     sv: {
         h2_1: "FISAF Personal Trainer",
@@ -21,6 +21,6 @@ export default {
         h2_4: "Fysiotraining",
         p_1: "1 x 60min 65€",
         p_2: "3 x 60min 180€",
-        p_3: "Personligt träningsprogram 65€ Till Fysiotraining paketets kunder Inbody på Aquarius 30€"
+        p_3: "Personligt träningsprogram 65€ Till Fysiotraining paketets kunder Inbody på Aquarius 30€."
     }
 }
