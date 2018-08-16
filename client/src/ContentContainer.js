@@ -13,6 +13,7 @@ import ticket6Img from "./images/ticket6.png";
 import ticket7Img from "./images/ticket7.png";
 import ticket8Img from "./images/ticket8.png";
 import logo from "./images/logo.png";
+import hmkLogo  from "./images/hmk_logo.png";
 
 import moment from "moment";
 
@@ -20,6 +21,7 @@ import moment from "moment";
 import news from "./data/news.js";
 import groupExercise from "./data/groupExercise.js";
 import personalTrainer from "./data/personalTrainer.js";
+import hmkFysio from "./data/hmkFysio.js";
 import enterpriseService from "./data/enterpriseService.js";
 import prices from "./data/prices.js";
 //import open from "./data/open.js";
@@ -252,26 +254,20 @@ const ContentContainer = props => {
           <Row>
             <Col xs={12} md={6}>
               <div className="personal-trainer-service">
-                <h2>{personalTrainer.pt[props.locale].h2}</h2>
-                <p>{personalTrainer.pt[props.locale].p}</p>
-                <ul>
-                  <li>{personalTrainer.pt[props.locale].li1}</li>
-                  <li>{personalTrainer.pt[props.locale].li2}</li>
-                  <li>{personalTrainer.pt[props.locale].li3}</li>
-                </ul>
-                <p>{personalTrainer.pt[props.locale].price1}</p>
-                <p>{personalTrainer.pt[props.locale].price2}</p>
-                <p>{personalTrainer.pt[props.locale].price3}</p>
+                <Image responsive src={hmkLogo} />
               </div>
             </Col>
             <Col xs={12} md={6}>
               <div className="personal-trainer-service">
-                <h2>{personalTrainer.duo[props.locale].h2}</h2>
-                <p>{personalTrainer.duo[props.locale].p}</p>
-                <ul>
-                  <li>{personalTrainer.duo[props.locale].li}</li>
-                </ul>
-                <p>{personalTrainer.duo[props.locale].price}</p>
+                <h2>{hmkFysio[props.locale].h2_1}</h2>
+                <h2>{hmkFysio[props.locale].h2_2}</h2>
+                <h2>{hmkFysio[props.locale].h2_3}</h2>
+                <h3>{hmkFysio[props.locale].h3_1}</h3>
+                <h3>{hmkFysio[props.locale].h3_2}</h3>
+                <h2>{hmkFysio[props.locale].h2_4}</h2>
+                <p>{hmkFysio[props.locale].p_1}</p>
+                <p>{hmkFysio[props.locale].p_2}</p>
+                <p>{hmkFysio[props.locale].p_3}</p>
               </div>
             </Col>
           </Row>
