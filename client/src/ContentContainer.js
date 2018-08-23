@@ -397,6 +397,11 @@ const ContentContainer = props => {
                     <td>{prices[props.locale].tr10td2}</td>
                     <td />
                   </tr>
+                  <tr>
+                    <td>{prices[props.locale].tr12td1}</td>
+                    <td>{prices[props.locale].tr12td2}</td>
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
               <div className="ticket-container">

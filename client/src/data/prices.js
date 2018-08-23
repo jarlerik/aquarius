@@ -1,6 +1,6 @@
 export default {
 	fi: {
-		h5: 'Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi ja Tyky Kuntoseteli.',
+		h5: 'Maksuvälineinä käy myös: Ticket Duo, Ticket Virike, Virikeseteli, Smartum, ePassi, Tyky Kuntoseteli ja Eazybreak.',
 		h4: 'Hinnasto',
 		p: 'Pidätämme oikeudet muutoksiin.',
 		tableHeader: 'Vuosijäsenyys',
@@ -28,10 +28,12 @@ export default {
 		tr10td1: 'Inbody',
 		tr10td2: '35€',
 		tr11td1: 'Inbody',
-		tr11td2: '20€'
+		tr11td2: '20€',
+		tr12td1: 'Henkilökohtainen kuntosaliohjelma',
+		tr12td2: '50€'
 	},
 	sv: {
-		h5: 'Som betalningsmedel tar vi emot: Ticket Duo, Ticket Virike, Virikesedlar, Smartum, ePassi och Tyky Motionssedlar.',
+		h5: 'Som betalningsmedel tar vi emot: Ticket Duo, Ticket Virike, Virikesedlar, Smartum, ePassi, Tyky Motionssedlar och Eazybreak.',
 		h4: 'Priser',
 		p: 'Vi förbehåller oss rätten till ändringar.',
 		tableHeader: 'Årsmedlemskap',
@@ -59,6 +61,8 @@ export default {
 		tr10td1: 'Inbody',
 		tr10td2: '35€',
 		tr11td1: 'Inbody',
-		tr11td2: '20€'
+		tr11td2: '20€',
+		tr12td1: 'Personligt träningsprogram',
+		tr12td2: '50€'
 	}
 }
