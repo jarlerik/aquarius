@@ -30,7 +30,7 @@ export default {
 		tr11td1: 'Inbody',
 		tr11td2: '20€',
 		tr12td1: 'Henkilökohtainen kuntosaliohjelma',
-		tr12td2: '50€'
+		tr12td2: '60€'
 	},
 	sv: {
 		h5: 'Som betalningsmedel tar vi emot: Ticket Duo, Ticket Virike, Virikesedlar, Smartum, ePassi, Tyky Motionssedlar och Eazybreak.',

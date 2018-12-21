@@ -13,7 +13,7 @@ import ticket6Img from "./images/ticket6.png";
 import ticket7Img from "./images/ticket7.png";
 import ticket8Img from "./images/ticket8.png";
 import logo from "./images/logo.png";
-import hmkLogo  from "./images/hmk_logo.png";
+import hmkLogo  from "./images/hmk_logo2.png";
 
 import moment from "moment";
 
