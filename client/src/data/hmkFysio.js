@@ -21,6 +21,6 @@ export default {
         h2_4: "Personlig Träning",
         p_1: "1 x 60min 80€ (inkl. 24% moms)",
         p_2: "3 x 60min 220€ (inkl. 24% moms)",
-        p_3: "Pt paketets kunder Inbody på Aquarius"
+        p_3: "Pt paketets kunder Inbody på Aquarius 30€"
     }
 }
