@@ -107,7 +107,7 @@ const ContentContainer = props => {
             </div>
             <hr />
             <Row>
-              <Col xs={6} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6}>
                 <div className="post-item-list">
                   <Row>
                     {props.posts &&
@@ -155,7 +155,7 @@ const ContentContainer = props => {
                   </Row>
                 </div>
               </Col>
-              <Col xs={6} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6}>
                   <div
                   class="fb-like-box fb_iframe_widget"
                   data-href="https://www.facebook.com/aquariussporting"
