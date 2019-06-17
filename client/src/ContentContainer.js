@@ -14,7 +14,6 @@ import ticket7Img from "./images/ticket7.png";
 import ticket8Img from "./images/ticket8.png";
 import logo from "./images/logo.png";
 import hmkLogo  from "./images/hmk_logo2.png";
-
 import moment from "moment";
 
 //content
@@ -26,6 +25,7 @@ import enterpriseService from "./data/enterpriseService.js";
 import prices from "./data/prices.js";
 //import open from "./data/open.js";
 import contact from "./data/contact.js";
+import InstagramFeed from "./instagram/InstagramFeed";
 
 utils.bootstrapUtils.addStyle(Button, "custom");
 
@@ -76,6 +76,7 @@ const ContentContainer = props => {
     }
   };
   moment.locale(props.locale);
+  const { instagram_edges } = props;
   return (
     <div className="contentContainer">
       <Row className="Content-element">
@@ -106,7 +107,7 @@ const ContentContainer = props => {
             </div>
             <hr />
             <Row>
-              <Col xs={12} md={8} lg={8}>
+              <Col xs={6} md={6} lg={6}>
                 <div className="post-item-list">
                   <Row>
                     {props.posts &&
@@ -154,9 +155,8 @@ const ContentContainer = props => {
                   </Row>
                 </div>
               </Col>
-
-              <Col xs={12} md={3} lg={3}>
-                <div
+              <Col xs={6} md={6} lg={6}>
+                  <div
                   class="fb-like-box fb_iframe_widget"
                   data-href="https://www.facebook.com/aquariussporting"
                   data-width="306"
@@ -164,8 +164,7 @@ const ContentContainer = props => {
                   data-stream="true"
                   data-header="true"
                   fb-xfbml-state="rendered"
-                  fb-iframe-plugin-query="app_id=&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306"
-                >
+                  fb-iframe-plugin-query="app_id=&amp;container_width=310&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Faquariussporting&amp;locale=fi_FI&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=306">
                   <iframe
                     name="f3d9bbdd3d41fe8"
                     frameborder="0"
@@ -179,11 +178,16 @@ const ContentContainer = props => {
                       visibility: "visible",
                       width: "306px",
                       height: "540px"
-                    }}
-                  />
+                    }}/>
                 </div>
               </Col>
             </Row>
+            <div>
+              <div>
+                <InstagramFeed edges={instagram_edges}/>
+              </div>
+             
+            </div>
           </div>
         </Element>
       </Row>

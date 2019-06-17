@@ -67,3 +67,26 @@ pe
     color: white;
 }
 
+.instagramFeed {
+	margin-top: 10px;
+	text-align: center;
+	padding: 10px;
+}
+
+.insta-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+.insta-item {
+	margin: 5px;
+	display: flex;
+}
+
+.follow-instagram {
+	color: #333333;
+}
+
